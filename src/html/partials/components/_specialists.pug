@@ -1,0 +1,33 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.specialists
+  +e.H2.title Наши специалисты
+  +e.gallery
+    - for (var i = 0; i < 3; i++){
+      +e.person(itemscope, itemtype="http://schema.org/Person")
+        +e.img
+          img(src="img/manager1.png", alt="manager", title="manager", itemprop="image")
+        +e.H3.name(itemprop="name") Ирина Сдлиннойфамилией
+    - }
+
+  +e.description Специалисты центра подготовят документы для открытия бизнеса, помогут просчитать риски и провести сертификацию
+
+  .row
+    .col-xs-12.col-lg-8.offset-lg-2
+      +b.steps
+        +e.item
+          +e.icon
+          +e.index Шаг 1 
+          +e.text Для начала работы с нами 
+            a(href="/") оставьте заявку   
+        +e.item
+          +e.icon
+          +e.index Шаг 2 
+          +e.text Утвердите готовый бизнес-план  
+        +e.item
+          +e.icon
+          +e.index Шаг 3 
+          +e.text Вышлите скан копий для оформления 
+        +e.btn
+          +b.A.btn--border-red.--color-red(href="#") Узнать подробнее
+

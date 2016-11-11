@@ -1,0 +1,69 @@
+include ../abstracts/bemto/bemto.pug
+
+// Header
++b.HEADER.header
+  +e.inner
+    .container
+      .row.row-xs-middle
+        .col-xs-12.col-sm-5.col-lg-3.col-xl-2
+          // Logo
+          +b.A.logo--header(href="index.html", itemscope, itemtype="http://schema.org/Brand") 
+            //- img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
+            span.blue Единый портал
+            span.red бизнес услуг
+
+        .col-xs-12.col-sm-2.hidden-lg
+          +e.hamburger
+            +b.A.hamburger(href="#")
+              span
+
+        .col-xs-12.flex-sm-last.col-lg-7.flex-lg-unordered.col-xl-8                  
+          // Nav
+          +b.NAV.nav
+            +e.UL.list
+              +e.item 
+                +e.A.link(href="page-business.html") Бизнес-планы
+              +e.item 
+                +e.A.link(href="page-services.html") Услуги
+              +e.item 
+                +e.A.link(href="page-expert.html") Эксперты и консультация
+              +e.item 
+                +e.A.link(href="page-reviews.html") Отзывы
+              +e.item
+                +e.A.link(href="page-contacts.html") Контакты
+
+        .col-xs-12.col-sm-4.offset-sm-1.col-lg-2.offset-lg-0
+          +e.btn
+            +b.A.btn--blue.--header(href="#") Свяжитесь со мной
+
+
+
+
+  +e.form
+    .container
+      // Form header
+      +b.SECTION.form--header
+        form(action='', method='')
+          .form-group.field-range 
+            span Стартовый капитал (руб.) от            
+            +e.INPUT.input(type='text', name='Стартовый капитал от')
+            span до
+            +e.INPUT.input(type='text', name='Стартовый капитал до')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-branch
+            span Отрасль
+            +e.SELECT.select.branch-list
+              option Отрасль 1
+              option Отрасль 2
+              option Отрасль 3
+              option Отрасль 4
+              option Отрасль 5
+          .form-group.field-question.required
+            +e.INPUT.input(type='text', name='Вопрос', placeholder="Ваш вопрос")
+            p.help-block Ошибка заполнения поля формы
+          .form-group
+            +b.BUTTON.btn--red(type='submit') Найти
+          //- p.help-block.help-block-success Ваша заявка отправлена
+
+
+

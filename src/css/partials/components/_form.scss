@@ -1,0 +1,175 @@
+.form{
+  text-align: center;  
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
+  form{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title{
+    margin: 0 35px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: $text-color-white;
+    @include font-family('Proxima Nova Regular', normal, normal);
+    letter-spacing: 0.1em;
+  }
+  &__text{
+    color: $text-color-white;
+    text-align: left;
+    padding-bottom: 15px;
+    margin: 0;
+  }
+  &__input{
+    border-radius: 3px;
+    color: $text-color-white;
+    background-color: transparent;
+    padding: 8px 10px;    
+    width: 100%;
+    border: 1px solid $white;
+    outline: none;
+    margin-bottom: 20px;
+    &::-webkit-input-placeholder{
+      color: $text-color-white;         
+    }       
+    &::placeholder{
+      color: $text-color-white;         
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    } 
+  }
+  &__textarea{
+    border-radius: 3px;
+    vertical-align: top;
+    color: $text-color-white;
+    background-color: transparent;
+    padding: 8px 10px;    
+    width: 100%;
+    border: 1px solid $white;
+    height: 75px;
+    outline: none;
+    margin-bottom: 20px;
+    &::-webkit-input-placeholder{
+      color: $text-color-white;         
+    }       
+    &::placeholder{
+      color: $text-color-white;         
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    } 
+  } 
+  &__select{
+    border-radius: 3px;
+    padding: 8px 10px; 
+    width: 100%;
+    color: $text-color-white;
+    border: 1px solid $white;
+    background-color: transparent;
+    outline: none;
+    margin-bottom: 20px;
+    option{
+      color: $blue;
+    }
+  }
+
+
+  &--header{
+    background-color: $blue;
+    form{
+      align-items: center;
+      justify-content: space-between;
+    }
+    .form__input, .form__textarea, .form__select{
+      width: auto;
+      padding: 10px 10px; 
+      margin-bottom: 0;
+      background-color: $white;
+      color: $text-color;
+      &::-webkit-input-placeholder{
+        color: $text-color;         
+      }       
+      &::placeholder{
+        color: $text-color;         
+      }
+      @include mq($from:lg, $until:xl){
+        max-width: 120px;
+      } 
+      @include mq($from:xs, $until:lg){
+        margin-bottom: 20px;
+      }
+
+    }
+    .form-group{
+      @include mq($from:xs, $until:lg){
+        flex: 0 0 100%;
+        text-align: center;
+      }
+
+      span{
+        padding: 0 5px;
+        &:first-of-type{
+          padding-left: 0;
+        }
+      }      
+    }
+  }
+  &--offers{
+    color: $text-color-white;
+    text-align: left;
+    background-color: $red;
+    padding: 50px 20px 30px;
+
+    .form-group{
+      width: 100%;
+      span:first-of-type{
+        display: inline-block;
+        width: 25%;
+      }
+      &:nth-of-type(2){
+        .form__input{
+          width: 50%;
+          margin-right: 10px;
+        } 
+      }
+      &:last-of-type{
+        text-align: center;
+      }
+    }
+    .form__input, .form__textarea, .form__select{
+      max-width: 70%;
+    }
+    .btn{
+      margin-top: 10px;
+    }
+  }
+  &--subscribe{
+    form{
+      justify-content: center;   
+    }
+    .form-group{
+      &:nth-of-type(1), &:nth-of-type(2){
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 20px;
+        margin-bottom: 20px;
+      }
+    }
+    .form__input, .form__textarea, .form__select{
+      min-height: 40px;
+    }
+  }
+}
+
+
