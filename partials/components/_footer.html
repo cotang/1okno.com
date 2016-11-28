@@ -4,11 +4,13 @@
     <div class="container">
       <div class="row row-xs-middle">
         <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3 col-xl-2">
-          <!-- Logo-->
-          <a class="logo logo--footer" href="index.html" itemscope="itemscope" itemtype="http://schema.org/Brand">
-            <span class="blue">Единый портал</span>
-            <span class="red">бизнес услуг</span>
-          </a>
+          <div class="footer__logo">
+            <!-- Logo-->
+            <a class="logo logo--footer" href="index.html" itemscope="itemscope" itemtype="http://schema.org/Brand">
+              <span class="blue">Единый портал</span>
+              <span class="red">бизнес услуг</span>
+            </a>
+          </div>
         </div>
         <div class="col-xs-12 col-sm-5 offset-sm-2 col-md-3 offset-md-5 col-lg-2 offset-lg-0 flex-lg-last">
           <div class="footer__btn">
@@ -41,3 +43,35 @@
     </div>
   </div>
 </footer>
+<!-- Overlay-->
+<div class="overlay">
+  <div class="overlay__bg"></div>
+  <div class="overlay__form">
+    <a class="overlay__close" href="/"></a>
+    <!-- Form upload-->
+    <section class="form form--upload">
+      <form action="" method="">
+        <h3 class="form__title">Расскажите свою историю успеха</h3>
+        <div class="form-group field-name required">
+          <div>Ваше имя*</div>
+          <input class="form__input" type="text" name="Имя" />
+          <p class="help-block">Ошибка заполнения поля формы</p>
+        </div>
+        <div class="form-group field-question">
+          <div>Введите текст</div>
+          <textarea class="form__textarea" name="Текст"></textarea>
+          <p class="help-block">Ошибка заполнения поля формы</p>
+        </div>
+        <div class="form-group field-upload">
+          <div>Загрузите фото</div>
+          <input class="form__input" type="file" accept="image/jpeg,image/png,image/gif" name="Фото" />
+          <p class="help-block">Ошибка заполнения поля формы</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn--red" type="submit">Отправить</button>
+          <p class="help-block help-block-success">Ваша заявка отправлена</p>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
