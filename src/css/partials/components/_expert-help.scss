@@ -1,0 +1,71 @@
+.expert-help{
+  margin-top: 70px;
+  text-align: center;
+  &__title{
+    font-size: $font-size-title;
+    @include font-family('Proxima Nova Light', normal, normal);
+    color: $text-black;
+    margin: 0 0 15px;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 15px;
+      width: 4px;
+      height: 25px;
+      background-color: $blue;
+    }
+  }
+  &__gallery{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  &__person{
+    margin-top: 5px;
+    flex: 0 0 16.6666%;
+    max-width: 16.6666%;
+  }
+
+  &__description{
+    background-color: $grey-marks;
+    padding: 20px 20px;
+    border-radius: 32px;
+    margin: 35px 0 10px;
+  }
+  &__form-title{
+    margin: 0;
+    padding-top: 20px;
+    font-size: $font-size-big;
+    background-color: $blue;
+    color: $text-color-white;
+    @include font-family('Proxima Nova Regular', normal, normal);    
+  }
+  &__form{
+    margin-top: 15px;
+    .form{
+      background-color: $blue;
+      color: $text-color-white;
+      padding-left: 10px;
+      padding-right: 10px;
+      text-align: left;
+      padding-bottom: 10px;
+    }
+    // form{
+    //   align-items: center;
+    // }
+    .form-group{
+      flex: 1 0 auto;
+      padding-left: 10px;
+      padding-right: 10px;
+      &:last-of-type{
+        flex: 0 0 auto;
+      }
+    }
+    .btn{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+
+}

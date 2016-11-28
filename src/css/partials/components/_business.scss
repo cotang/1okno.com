@@ -1,0 +1,126 @@
+.business{
+  &__img{
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+  &__title{
+    margin: 0;
+    font-size: $font-size-title;
+    color: $text-black;
+    @include font-family('Proxima Nova Regular', normal, normal);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg,rgba(255,255,255,1) 0,rgba(255,255,255,.1) 100%);
+    max-width: 70%;
+    padding: 30px 20px 20px;
+    line-height: 1;
+  }
+
+  &__options{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 35px;
+  }
+}
+
+.key-data{
+  margin-top: 35px;
+  &__title{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: $font-size-big;
+    color: $text-black;
+    @include font-family('Proxima Nova Regular', normal, normal);
+    border-bottom: 1px solid $grey-border;
+  } 
+  &__list{
+    padding-left: 20px;
+    margin: 15px 0 0;
+    list-style-type: none;
+    columns: 2;
+  } 
+  &__item{
+    display: flex;
+    align-items: flex-end;
+    margin: 10px 0;
+  }
+  &__text{
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+  &__figures{
+    color: $red;
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+.business-description{
+  margin-top: 60px;
+  &__title{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: $font-size-big;
+    color: $text-black;
+    @include font-family('Proxima Nova Regular', normal, normal);
+    border-bottom: 1px solid $grey-border;
+  } 
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+  }  
+  &__item{
+    padding-left: 35px;
+    &--active{
+      .business-description__text{
+        display: block;
+      }
+      .business-description__type:after{
+        @include sprite($s-down-red);
+      }
+    }
+  }
+  &__type{  
+    margin: 30px 0 0;
+    font-size: $font-size;  
+    @include font-family('Proxima Nova Regular', normal, normal);
+    &:after{
+      content: '';
+      display: inline-block;
+      margin-left: 0.5em;
+      @include sprite($s-next-red); 
+    }
+  }
+  &__link{
+    color: $red;
+  }
+  &__text{
+    padding-left: 40px;
+    display: none;
+    li{
+      list-style-type: none;
+      &:before{
+        content: '•';
+        font-size: 1.4em;
+        display: inline-block;
+        vertical-align: middle;
+        color: $red;
+        margin-right:.5em;
+      }
+    }
+  }
+}
+
+.share{
+  margin-left: 90px;
+  .btn{
+    margin-left: 10px;
+  }
+}

@@ -1,6 +1,6 @@
 .footer{
   background-color: $grey-footer;
-  padding: 25px 0 15px;
+  padding: 25px 0 20px;
 
   // &--stuck-to-bottom{
   //   position: absolute;
@@ -8,7 +8,12 @@
   //   bottom: 0;
   //   width: 100%;   
   // }
-
+  &__logo{
+    margin-right: -10px;
+    @include mq($from:xs, $until:lg){
+      margin: 0;
+    }
+  }
   &__btn{
     margin-left: -10px;
   }

@@ -37,6 +37,55 @@ jQuery(document).ready(function($){
       $(this).closest('.header').find('.nav').toggle();
   });
 
+  /* business description */
+  $('.business-description__link').click(function(e){
+      e.preventDefault();
+      $(this).closest('.business-description__item').toggleClass('business-description__item--active');
+  }); 
+
+  /* reviews masonry */
+  $('.reviews__articles').masonry({
+    columnWidth: '.review-item',
+    itemSelector: '.review-item'
+  });
+
+  /* Form success story the modal window */
+  $('.success-story .btn').click( function(e){
+    e.preventDefault(); 
+    var suffix = $(this).data('form'); 
+    $('body').css({'overflow':'hidden'});   
+    $('.overlay').show();
+    var formClass = '.form--upload';
+    $('.overlay').find(formClass).fadeIn();
+  });
+  /* Close the modal window */
+  $('.overlay__bg, .overlay__close').click( function(e){ 
+    e.preventDefault();
+    $('body').css({'overflow':'auto'});
+    $(this).closest('.overlay').find('.form').fadeOut();
+    $(this).closest('.overlay').fadeOut(400);
+  }); 
+
+  /* question sort - branch */
+  $('.questions-controls__sort-link').click(function(e) { 
+    e.preventDefault();  
+    $(this).closest('.questions-controls__sort').find('.sort').toggle();
+    $(this).toggleClass('questions-controls__sort-link--active');
+  });
+  $('.sort').mouseleave(function(){
+    $(this).fadeOut();
+    $(this).closest('.questions-controls__sort').find('.questions-controls__sort-link').removeClass('questions-controls__sort-link--active');
+  });
+  $('.sort__link').on('click', function(){
+    $(this).closest('.questions-controls__sort').find('.questions-controls__sort-link').removeClass('questions-controls__sort-link--active');
+    $(this).closest('.questions-controls__sort').find('.questions-controls__sort-link').html($(this).html());
+    $('.sort').hide(); 
+    return false;
+  });
+
+
+
+
   // $('.menu-services__close').click(function(e) { 
   //     e.preventDefault();
   //     $(this).closest('.menu-services').hide();

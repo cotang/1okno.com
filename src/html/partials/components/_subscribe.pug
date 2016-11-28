@@ -11,9 +11,11 @@ include ../abstracts/bemto/bemto.pug
           +b.SECTION.form--subscribe
             form(action='', method='')
               .form-group.field-email.required
-                +e.INPUT.input(type='text', name='Email', placeholder='Ваш email')
+                div Ваш email*
+                +e.INPUT.input(type='text', name='Email')
                 p.help-block Ошибка заполнения поля формы
               .form-group.field-branch
+                div Отрасль
                 +e.SELECT.select.branch-list
                   option Отрасль 1
                   option Отрасль 2

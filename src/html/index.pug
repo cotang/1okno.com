@@ -2,7 +2,9 @@ extends partials/templates/_template.pug
 
 block content
   +b.SECTION.page--front-page
-
+    - var index = true
+    // Business form
+    include partials/components/_business-form.pug
     // Offers
     include partials/components/_offers.pug
     +e.page__inner
@@ -14,10 +16,10 @@ block content
           .col-xs-12.col-lg-6
             // Consult
             include partials/components/_consult.pug
-    // Questions
-    include partials/components/_questions.pug
-    // Reviews
-    include partials/components/_reviews.pug
+    // Expert answers
+    include partials/components/_expert-answers.pug
+    // Reviews section
+    include partials/components/_reviews-section.pug
     // Subscribe
     include partials/components/_subscribe.pug
 

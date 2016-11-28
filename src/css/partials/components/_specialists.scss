@@ -1,17 +1,19 @@
 .specialists{
-  margin-top: 150px;
   margin-right: 60px;
-  @include mq($from:xs, $until:lg){
-    margin-top: 50px;
-  }
-  
+ 
   &__title{
-    border-left: 3px solid $blue;
-    padding-left: 25px;
     font-size: $font-size-title;
     @include font-family('Proxima Nova Light', normal, normal);
     color: $text-black;
     margin: 0 0 15px;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 15px;
+      width: 4px;
+      height: 25px;
+      background-color: $blue;
+    }
   }
   &__gallery{
     display: flex;
@@ -33,49 +35,5 @@
     text-align: center;
     padding: 10px 20px;
     border-radius: 33px;
-  }
-}
-.steps{
-  border: 1px dashed $grey-border;
-
-  &__item{
-    margin-top: 30px;
-    margin-bottom: 55px;
-    padding-left: 80px;
-    position: relative;
-    &:nth-of-type(1){
-      .steps__icon{
-        @include sprite($s-step1);
-      }
-    }
-    &:nth-of-type(2){
-      .steps__icon{
-        @include sprite($s-step2);
-      }
-    }
-    &:nth-of-type(3){
-      .steps__icon{
-        @include sprite($s-step3);
-      }
-    }
-  }
-  &__index{
-    color: $text-black;
-  }  
-  &__icon{
-    position: absolute;
-    top: 0.3em;
-    left: 0.8em;
-  }  
-  &__text{
-    a{
-      color: $red;
-      &:hover, &:focus {
-        color: $red;
-      }
-    }
-  }
-  &__btn{
-    margin: -15px 20px 20px;
   }
 }

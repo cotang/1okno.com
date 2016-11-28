@@ -1,0 +1,72 @@
+include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_question-item.pug
+include ../abstracts/mixins/_member-item.pug
+
++b.SECTION.questions-type
+  .container
+    +b.questions-controls
+      +e.sort Сортировать
+        +e.sort-link(href='#') по отраслям
+        +b.UL.sort
+          +e.item
+            +e.link(href='#') отрасль 1
+          +e.item
+            +e.link(href='#') отрасль 2
+          +e.item
+            +e.link(href='#') отрасль 3
+          +e.item
+            +e.link(href='#') отрасль 4
+
+      +e.filter Показывать 
+        +e.filter-link(href='#') популярные
+        =' / '
+        +e.SPAN.filter-chosen последние
+
+    +b.expert-type--certificators
+      +e.H1.title
+        +e.icon
+        +e.branch Специалисты по сертификации
+
+      .row
+        .col-xs-12.col-lg-4
+          +e.articles
+            +questionItem
+            +questionItem
+            +questionItem
+
+        .col-xs-12.col-lg-4
+          +e.articles
+            +questionItem
+            +questionItem
+            +questionItem
+
+        .col-xs-12.col-lg-4
+          +b.members
+            +memberItem
+            +memberItem
+            +memberItem
+            +memberItem
+            +memberItem
+            +memberItem
+          // Subscribe section
+          +b.subscribe-section
+            +e.H3.title Подписаться на новые вопросы по сертификации
+            +e.form
+              // Form subscribe
+              +b.SECTION.form--subscribe
+                form(action='', method='')
+                  .form-group.field-email.required
+                    div Ваш email*
+                    +e.INPUT.input(type='email', name='Email')
+                    p.help-block Ошибка заполнения поля формы
+                  .form-group
+                    +b.BUTTON.btn--blue.--border-white(type='submit') Отправить
+                    p.help-block.help-block-success Ваша заявка отправлена
+
+    +b.pagination
+      +e.A.number--current(href="page-type-questions.html") 1
+      +e.A.number(href="page-type-questions.html") 2
+      +e.A.number(href="page-type-questions.html") 3
+      +e.SPAN.dots ...
+      +e.A.number(href="page-type-questions.html") 10
+

@@ -1,0 +1,43 @@
+.form-question{
+  text-align: left;
+  // background-color: $blue;
+  // color: $text-color-white;
+
+  
+  &__title{
+    position: relative;
+    // letter-spacing: -0.015em;
+    font-size: $font-size-title;
+    @include font-family('Proxima Nova Light', normal, normal);
+    color: $text-black;
+    margin: 0 0 15px;
+    padding-left: 15px;
+    &:before{
+      content: '';
+      display: inline-block;
+      margin-right: 15px;
+      width: 4px;
+      height: 25px;
+      background-color: $blue;
+    }
+  }
+  .form{
+    text-align: left;
+    background-color: $blue;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    color: $text-color-white;    
+  }
+  .form-group{
+    flex: 0 0 100%;
+  }
+  .form__textarea{
+    height: 200px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
+
+

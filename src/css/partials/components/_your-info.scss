@@ -1,0 +1,37 @@
+.your-info{
+  background-image: url(../img/business-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: $text-color-white;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  &__title{
+    display: inline-block;
+    font-size: $font-size-title;
+    @include font-family('Proxima Nova Light', normal, normal);
+    margin: 0 0 5px;
+  }
+  &__text{
+    margin: 0 0 20px;
+  }
+
+
+  form{
+    text-align: left;
+    justify-content: space-between;   
+  }
+  .form-group{
+    flex: 0 0 30%;
+    &:last-of-type{
+      flex: 0 0 100%;
+      text-align: center;
+    }
+  }
+  .btn{
+    margin-top: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

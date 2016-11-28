@@ -1,0 +1,12 @@
+mixin reviewItem(text)
+
+  +b.ARTICLE.review-item(itemscope, itemtype="http://schema.org/Review")
+    +e.person(itemprop="author", itemscope, itemtype="http://schema.org/Person")
+      +e.info
+        +e.name(itemprop="name") Ирина Владимирова
+        //- +e.position(itemprop="jobTitle") Счастливый директор свечного заводика
+        +e.date 13.09.2016
+      +e.img
+        img(src="img/client1.png", alt="manager", title="manager", itemprop="image")
+    +e.text(itemprop="reviewBody") !{text}         
+

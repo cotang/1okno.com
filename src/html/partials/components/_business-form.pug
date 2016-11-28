@@ -1,0 +1,31 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.business-form
+  .container
+    // Form business
+    +b.SECTION.form--business
+      form(action='', method='')
+        .form-group.field-range 
+          span Стартовый капитал (руб.) от            
+          +e.INPUT.input(type='text', name='Стартовый капитал от', placeholder='50 000')
+          span до
+          +e.INPUT.input(type='text', name='Стартовый капитал до', placeholder='1 000 000')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-branch
+          span Отрасль
+          +e.SELECT.select.branch-list
+            option Отрасль 1
+            option Отрасль 2
+            option Отрасль 3
+            option Отрасль 4
+            option Отрасль 5
+        .form-group.field-question.required
+          +e.INPUT.input(type='text', name='Вопрос', placeholder="Ваш вопрос")
+          p.help-block Ошибка заполнения поля формы
+        .form-group
+          +b.BUTTON.btn--red(type='submit') Найти
+          p.help-block.help-block-success Ваша заявка отправлена
+
+
+

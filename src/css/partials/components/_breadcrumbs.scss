@@ -1,7 +1,6 @@
 .breadcrumbs{
-  color: $text-color-white;
-  @include font-family('Open Sans Light', normal, normal);
-  padding: 20px 0 0;
+  font-size: $font-size-small;
+  padding: 15px 0;
   a{
     margin-right: 10px;
   }
@@ -11,9 +10,5 @@
   span{
     display: inline-block;
     margin-left: 10px;
-  }
-
-  &--dark{
-    color: $text-color;
   }
 }

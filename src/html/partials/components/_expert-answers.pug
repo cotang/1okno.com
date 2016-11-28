@@ -1,0 +1,55 @@
+include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_question-item.pug
+
++b.SECTION.expert-answers
+  .container
+    if index
+      +e.H2.title Отвечают эксперты
+    else
+      +e.H2.title Отвечают эксперты в сфере Услуги для населения
+    .row
+
+      +b.expert-type--certificators.col-xs-12.col-lg-4
+        +e.inner
+          +e.H3.title
+            +e.icon
+            +e.branch Специалисты по сертификации
+          +e.articles
+            +questionItem
+            +questionItem
+          if index
+            +e.btn               
+              +b.A.btn--border-red.--color-red(href="page-questions.html") Все вопросы
+
+      +b.expert-type--lawyers.col-xs-12.col-lg-4
+        +e.inner
+          +e.H3.title
+            +e.icon
+            +e.branch Юристы центра
+          +e.articles
+            +questionItem
+            +questionItem
+          if index
+            +e.btn               
+              +b.A.btn--border-red.--color-red(href="page-questions.html") Все вопросы
+
+      +b.expert-type--bookkeepers.col-xs-12.col-lg-4
+        +e.inner      
+          +e.H3.title
+            +e.icon
+            +e.branch Бухгалтерская поддержка
+          +e.articles
+            +questionItem
+            +questionItem
+          if index
+            +e.btn               
+              +b.A.btn--border-red.--color-red(href="page-questions.html") Все вопросы
+
+    if !index
+      +e.btn
+        +b.A.btn--border-blue.--color-blue(href="page-questions.html") Все консультации данной отрасли
+
+
+
+        
+ 

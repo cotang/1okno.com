@@ -14,20 +14,29 @@
     text-decoration: none;
   }
 
+  &--header{
+    &:hover, &:focus, &:active{
+      border: 1px solid $blue;
+    }    
+  }
+  &--header, &--footer{
+    width: 100%;
+    padding: 8px;
+    text-transform: none;
+  }
+  &--red{
+    background-color: $red;
+    &:hover, &:focus, &:active{
+      color: $red;
+      background-color: $white;
+    }
+  }
   &--blue{
     background-color: $blue;
     &:hover, &:focus, &:active{
       color: $blue;
       background-color: $white;
     }
-  }
-  &--header, &--footer{
-    width: 100%;
-    padding: 8px;
-    text-transform: none;
-  } 
-  &--red{
-    background-color: $red;
   }
   &--color-red{
     color: $red;
@@ -36,29 +45,37 @@
       background-color: $red;      
     }    
   }
+  &--color-blue{
+    color: $blue;
+    &:hover, &:focus, &:active{
+      color: $text-color-white;
+      background-color: $blue;      
+    }    
+  }
   &--border-white{
     border: 1px solid $white;
   }
   &--border-red{
     border: 1px solid $red;
   }
-  
-  // &--404{
-  //   background-color: $green;
-  //   text-transform: none;
-  // }
-  // &--more{
-  //   background-color: $white;
-  //   color: $dark-violet;
-  //   @include font-family('Open Sans Regular', normal, normal); 
-  //   font-size: $font-size-small;
-  //   &:hover, &:focus, &:active{
-  //     color: $dark-violet;
-  //     text-decoration: underline;
-  //   }
-  // } 
-  // &--footer{
-  //   font-size: $font-size;
-  // }
+  &--border-blue{
+    border: 1px solid $blue;
+  }  
+ 
+  &--vk{    
+    @include sprite($s-social-vk); 
+    padding: 0;
+    vertical-align: text-bottom;
+  }
+  &--fb{    
+    @include sprite($s-social-fb); 
+    padding: 0;
+    vertical-align: text-bottom;
+  }
+  &--tw{    
+    @include sprite($s-social-tw); 
+    padding: 0;
+    vertical-align: text-bottom;
+  }
 }
 

@@ -1,42 +1,42 @@
 .reviews{
-  margin-top: 100px;
-  text-align: center;
-  margin-bottom: 75px;
-  @include mq($from:xs, $until:lg){
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
+  margin-bottom: 80px;
 
-  &__title{
+  &__articles{
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  &__btn{
+    margin-top: 60px;
     text-align: center;
-    display: inline-block;
-    border-left: 3px solid $red;
-    padding-left: 25px;
-    font-size: $font-size-title;
-    @include font-family('Proxima Nova Light', normal, normal);
-    color: $text-black;
-    margin: 0 0 15px;
   }
 }
 
 .review-item{
-  text-align: left;
-  margin-top: 50px;
-  &__info{
-    margin: 20px auto 0;
-    max-width: 180px;
+  width: 33.3333%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 40px;
+  &__person{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   &__name{
     color: $text-black;
-    margin-bottom: 10px;
+    font-size: $font-size-big;
   }
-  &__position{
-    margin-bottom: 10px;
+  // &__position{
+  //   max-width: 220px;    
+  // }
+  &__date{
+    font-size: $font-size-small;
   }
   &__img{
-    width: 125px;
-    height: 125px;
-    margin: 0 auto;
+    flex: 0 0 112px;
+    width: 112px;
+    height: 112px;
+    margin-right: 20px;
+    position: relative;
     img{
       width: 100%;
       height: 100%;
@@ -44,21 +44,16 @@
       object-fit: cover;
       border-radius: 50%;
     }
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      right: -22px;
+      @include sprite($s-client-icon);
+      transform: scale(0.8);
+    }
   }
   &__text{
-    margin: 20px 0;
-  }
-  &__btn{
-    text-align: center;
-    margin-top: 30px;
-  }
-}
-.refresh{
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  &__icon{
-    display: inline-block;
-    @include sprite($s-refresh);    
+    padding-left: 20px;
   }
 }

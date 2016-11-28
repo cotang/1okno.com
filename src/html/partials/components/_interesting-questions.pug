@@ -1,0 +1,24 @@
+include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_question-item.pug
+
++b.SECTION.interesting-questions
+  +e.H2.title Вам будет интересно
+  +e.articles
+    +b.expert-type--certificators
+      +e.inner
+        +e.H3.title
+          +e.icon
+          +e.branch Специалисты по сертификации
+        +questionItem
+    +b.expert-type--lawyers
+      +e.inner
+        +e.H3.title
+          +e.icon
+          +e.branch Юристы центра
+        +questionItem
+    +b.expert-type--bookkeepers
+      +e.inner      
+        +e.H3.title
+          +e.icon
+          +e.branch Бухгалтерская поддержка
+        +questionItem 

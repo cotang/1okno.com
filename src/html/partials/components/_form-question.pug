@@ -1,0 +1,33 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.form-question
+  if pageBusiness
+    +e.H2.title Эксперты предлагают бесплатную консультацию по вопросам ведения коммерческой деятельности. Задайте вопрос специалисту!    
+  else 
+    +e.H2.title Задайте вопрос специалисту
+
+  +e.form
+    // Form question
+    +b.SECTION.form--question
+      form(action='', method='')
+        .form-group.field-email.required
+          div Ваш email*
+          +e.INPUT.input(type='email', name='Email')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-tel
+          div Ваш телефон
+          +e.INPUT.input(type='tel', name='Телефон')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-expert
+          div Спросить специалиста по сертификации
+          +e.SELECT.select.branch-list
+            option Специалист по сертификации
+            option Юрист центра
+            option Бухгалтер
+        .form-group.field-question
+          div Ваш вопрос
+          +e.TEXTAREA.textarea(name='Вопрос')
+          p.help-block Ошибка заполнения поля формы
+        .form-group
+          +b.BUTTON.btn--blue.--border-white(type='submit') Задать вопрос
+          p.help-block.help-block-success Ваш вопрос отправлен

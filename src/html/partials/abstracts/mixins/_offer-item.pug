@@ -1,0 +1,20 @@
+mixin offerItem
+
+  +b.ARTICLE.offer-item
+    +e.A.link(href="single-business.html")
+      +e.DIV.img
+        img(src='img/offer1.jpg', alt='offer1', title='offer1')
+      +e.DIV.text          
+        +e.H3.title Фитоняшка
+        +e.description бизнес-план для собственного фитнесс-клуба
+      +e.DIV.details
+        +b.offer-detail
+          +e.figures 4 000 000 Р
+          +e.text Стартовый капитал 
+        +b.offer-detail
+          +e.figures 6 мес
+          +e.text Окупаемость 
+        +b.offer-detail
+          +e.figures 90 000 Р
+          +e.text Прибыль в месяц       
+

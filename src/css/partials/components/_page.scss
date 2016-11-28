@@ -1,0 +1,76 @@
+.page{
+  &--type-questions{
+    .expert-type{
+      border-right: none;
+    }
+  }
+  &--single-question{
+    .expert-type{
+      border-right: none;
+    }
+    .question-item{
+      margin-top: 0;
+    }
+  }
+  &--questions{
+
+  }
+  &--reviews{
+    .page__inner{
+      padding-top: 70px;
+      padding-bottom: 90px;
+    }
+  }
+  &--single-business {
+    .expert-answers{
+      margin-top: 110px;
+    }
+    .offers{
+      margin-top: 120px;
+      margin-bottom: 50px;
+    }
+    .offers__title{
+      margin-bottom: 10px;
+    }
+  }
+  &--business {
+    .consult__title{
+      margin-top: -5px;
+      margin-bottom: 40px;
+      font-size: $font-size-big;
+      &:before{
+        vertical-align: text-bottom;
+      }
+    }
+    .staff{
+      margin-top: 15px;
+    }
+    .staff__gallery{
+      margin-right: 20px;
+    }
+    .form-question__title{
+      letter-spacing: -0.015em;
+      font-size: $font-size-big;
+      &:before{
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+
+
+  &__inner{
+    padding-top: 70px;
+    padding-bottom: 80px;
+    @include mq($from:xs, $until:lg){
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  } 
+  &__content{
+    padding-top: 15px;
+  }
+}
+

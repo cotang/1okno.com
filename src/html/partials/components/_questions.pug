@@ -1,44 +1,63 @@
 include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_question-item.pug
 
 +b.SECTION.questions
   .container
-    +e.H2.title Отвечают эксперты
-    .row
+    +b.questions-controls
+      +e.sort Сортировать
+        +e.sort-link(href='#') по отраслям
+        +b.UL.sort
+          +e.item
+            +e.link(href='#') отрасль 1
+          +e.item
+            +e.link(href='#') отрасль 2
+          +e.item
+            +e.link(href='#') отрасль 3
+          +e.item
+            +e.link(href='#') отрасль 4
 
-      +b.questions-type--certificators.col-xs-12.col-lg-4
+      +e.filter Показывать 
+        +e.filter-link(href='#') популярные
+        =' / '
+        +e.SPAN.filter-chosen последние
+
+    .row
+      +b.expert-type--certificators.col-xs-12.col-lg-4
         +e.inner
           +e.H3.title
             +e.icon
             +e.branch Специалисты по сертификации
           +e.articles
-            include _questions-article.pug
-            include _questions-article.pug
-          +e.questions-type__btn               
-            +b.A.btn--border-red.--color-red(href="#") Все вопросы
+            +questionItem
+            +questionItem
+            +questionItem
 
-      +b.questions-type--lawyers.col-xs-12.col-lg-4
+      +b.expert-type--lawyers.col-xs-12.col-lg-4
         +e.inner
           +e.H3.title
             +e.icon
             +e.branch Юристы центра
           +e.articles
-            include _questions-article.pug
-            include _questions-article.pug
-          +e.questions-type__btn               
-            +b.A.btn--border-red.--color-red(href="#") Все вопросы
+            +questionItem
+            +questionItem
+            +questionItem
 
-      +b.questions-type--bookkeepers.col-xs-12.col-lg-4
+      +b.expert-type--bookkeepers.col-xs-12.col-lg-4
         +e.inner      
           +e.H3.title
             +e.icon
             +e.branch Бухгалтерская поддержка
           +e.articles
-            include _questions-article.pug
-            include _questions-article.pug
-          +e.questions-type__btn              
-            +b.A.btn--border-red.--color-red(href="#") Все вопросы
+            +questionItem
+            +questionItem
+            //- +b.all-questions
+            //-   +b.A.btn--border-red.--color-red(href="#") Все вопросы
+            //-   +b.A.btn--border-blue.--color-blue(href="#") Задать вопрос
+            +questionItem 
 
-
-
-        
- 
+    +b.pagination
+      +e.A.number--current(href="page-questions.html") 1
+      +e.A.number(href="page-questions.html") 2
+      +e.A.number(href="page-questions.html") 3
+      +e.SPAN.dots ...
+      +e.A.number(href="page-questions.html") 10

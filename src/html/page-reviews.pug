@@ -1,0 +1,19 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--reviews
+
+    // Reviews
+    include partials/components/_reviews.pug
+    // Success story
+    include partials/components/_success-story.pug
+    +e.page__inner
+      .container
+        .row
+          .col-xs-12.col-lg-6
+            // Specialists
+            include partials/components/_specialists.pug 
+          .col-xs-12.col-lg-6
+            // Consult
+            include partials/components/_consult.pug
+

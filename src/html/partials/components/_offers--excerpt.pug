@@ -1,0 +1,34 @@
+include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_offer-item.pug
+
++b.SECTION.offers
+  .container
+    +e.H2.title Смотрите также
+    +e.text Похожие бизнес-планы по стартовому капиталу "
+      span.red до 500 000 руб.
+      | " и отрасли "
+      span.red Услуги для населения
+      | "    
+    +e.inner     
+      //- 1
+      +offerItem
+      //- 2
+      +offerItem
+      //- 3
+      +offerItem
+      //- 4
+      +offerItem
+      //- 5
+      +b.ARTICLE.offer-item--selection
+        +e.DIV.inner        
+          +e.H3.title Подберем необходимый вам бизнес-план
+          +e.description под ваш бюджет и пожелания
+          +e.btn
+            +b.A.btn--border-white.--red(href="#") Показать все
+      //- 6
+      +b.ARTICLE.offer-item--your-idea
+        +e.DIV.inner        
+          +e.H3.title Рассчитаем и составим бизнес-план по вашей идее
+          +e.description под ваш бюджет и пожелания
+          +e.btn
+            +b.A.btn--border-white.--blue(href="#") Узнать подробнее

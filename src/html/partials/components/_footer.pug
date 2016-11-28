@@ -6,11 +6,12 @@ include ../abstracts/bemto/bemto.pug
     .container
       .row.row-xs-middle
         .col-xs-12.col-sm-5.col-md-4.col-lg-3.col-xl-2
-          // Logo
-          +b.A.logo--footer(href="index.html", itemscope, itemtype="http://schema.org/Brand")       
-            //- img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
-            span.blue Единый портал
-            span.red бизнес услуг
+          +e.logo
+            // Logo
+            +b.A.logo--footer(href="index.html", itemscope, itemtype="http://schema.org/Brand")       
+              //- img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
+              span.blue Единый портал
+              span.red бизнес услуг
 
         .col-xs-12.col-sm-5.offset-sm-2.col-md-3.offset-md-5.col-lg-2.offset-lg-0.flex-lg-last
           +e.btn
@@ -31,12 +32,29 @@ include ../abstracts/bemto/bemto.pug
               +e.item
                 +e.A.link(href="page-contacts.html") Контакты
 
-
-
-//- // Overlay
-//- +b.overlay
-  //- +e.form
-  //-   include _form--modal.pug
-
+// Overlay
++b.overlay
+  +e.bg
+  +e.form
+    +e.close(href="/")
+    // Form upload
+    +b.SECTION.form--upload
+      form(action='', method='')
+        +e.H3.title Расскажите свою историю успеха
+        .form-group.field-name.required
+          div Ваше имя*
+          +e.INPUT.input(type='text', name='Имя')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-question
+          div Введите текст
+          +e.TEXTAREA.textarea(name='Текст')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-upload
+          div Загрузите фото
+          +e.INPUT.input(type="file", accept="image/jpeg,image/png,image/gif", name='Фото')
+          p.help-block Ошибка заполнения поля формы
+        .form-group
+          +b.BUTTON.btn--red(type='submit') Отправить
+          p.help-block.help-block-success Ваша заявка отправлена
 
 

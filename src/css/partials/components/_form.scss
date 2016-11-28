@@ -11,9 +11,8 @@
   }
 
   &__title{
-    margin: 0 35px;
+    padding: 0 35px 20px;
     text-transform: uppercase;
-    padding-bottom: 20px;
     color: $text-color-white;
     @include font-family('Proxima Nova Regular', normal, normal);
     letter-spacing: 0.1em;
@@ -85,7 +84,7 @@
   }
 
 
-  &--header{
+  &--business{
     background-color: $blue;
     form{
       align-items: center;
@@ -109,7 +108,9 @@
       @include mq($from:xs, $until:lg){
         margin-bottom: 20px;
       }
-
+    }
+    .form__select{
+      width: 200px;      
     }
     .form-group{
       @include mq($from:xs, $until:lg){
@@ -121,6 +122,17 @@
         padding: 0 5px;
         &:first-of-type{
           padding-left: 0;
+        }
+      }
+
+      &:nth-of-type(1){
+        .form__input{
+          width: 120px;
+        }        
+      } 
+      &:nth-of-type(3){
+        .form__input{
+          width: 220px;
         }
       }      
     }
@@ -159,6 +171,7 @@
       justify-content: center;   
     }
     .form-group{
+      text-align: left;
       &:nth-of-type(1), &:nth-of-type(2){
         flex: 0 0 50%;
         max-width: 50%;
@@ -167,6 +180,7 @@
       }
     }
     .form__input, .form__textarea, .form__select{
+      margin-top: 5px;
       min-height: 40px;
     }
   }

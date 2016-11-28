@@ -1,0 +1,16 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.succeeded-examples
+  .container
+    +e.H2.title Успешные проекты, прошедшие все стадии оформления
+    +e.gallery
+      - for (var i = 0; i < 3; i++){
+        +e.item
+          +e.logo
+            img(src='img/voobrazhulya.png', alt='voobrazhulya', title='voobrazhulya')
+          +e.name Воображуля
+          +e.link(href="#") http://voobrajulya.ru
+      - }
+
+       
+ 

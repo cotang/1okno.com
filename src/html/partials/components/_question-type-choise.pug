@@ -1,0 +1,20 @@
+include ../abstracts/bemto/bemto.pug
+
+
++b.question-type-choise
+  .container
+    +e.inner
+      +e.UL.list
+        +e.item
+          +e.link(href="page-type-questions.html") Регистрация бизнеса
+        +e.item
+          +e.link--active(href="page-type-questions.html") Сертификация
+        +e.item
+          +e.link(href="page-type-questions.html") Бухгалтерские услуги
+      // Search
+      +b.search
+        +e.FORM.form
+          +e.INPUT.input(type='text', name='Вопрос', placeholder="Ваш вопрос")
+          +b.BUTTON.btn--red(type='submit') Найти
+
+

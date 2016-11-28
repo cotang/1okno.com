@@ -1,0 +1,27 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--business
+    - var pageBusiness = true
+    // Business form
+    include partials/components/_business-form.pug
+    // Offers
+    include partials/components/_offers.pug
+    // Your info
+    include partials/components/_your-info.pug
+    // Questions left
+    +b.questions-left
+      .container
+        +e.H2.title Остались вопросы? Спросите экспертов
+        .row
+          .col-xs-12.col-lg-6
+            // Consult
+            include partials/components/_consult.pug
+          .col-xs-12.col-lg-6
+            // Form question
+            include partials/components/_form-question.pug
+    // Subscribe
+    include partials/components/_subscribe.pug
+
+
+

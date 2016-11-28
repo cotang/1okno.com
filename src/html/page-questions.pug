@@ -1,0 +1,20 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--questions
+    - var pageQuestions = true
+
+    // Question type choise
+    include partials/components/_question-type-choise.pug
+    // Questions
+    include partials/components/_questions.pug
+
+    +e.page__inner
+      .container
+        .row
+          .col-xs-12.col-lg-6
+            // Form question
+            include partials/components/_form-question.pug
+          .col-xs-12.col-lg-6
+            // Specialists
+            include partials/components/_specialists.pug
