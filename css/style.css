@@ -1117,13 +1117,13 @@ img {
       height: 200px; }
     .form--question .btn {
       margin-top: 20px; }
-  .form--application {
+  .form--application-services {
     background-color: #669cd6;
     color: #ffffff;
     padding-left: 20px;
     padding-right: 20px;
     text-align: left; }
-    .form--application .form-group {
+    .form--application-services .form-group {
       -ms-flex: 0 0 100%;
           flex: 0 0 100%; }
   .form--expert-help {
@@ -1148,24 +1148,6 @@ img {
     .form--expert-help .btn {
       padding-left: 30px;
       padding-right: 30px; }
-  .form--upload {
-    background-color: #ffffff;
-    display: none;
-    /* возможно поправить */ }
-    .form--upload .form__title {
-      color: #000000;
-      text-align: center;
-      margin: 15px 0;
-      padding: 0 35px 20px; }
-    .form--upload .form-group {
-      text-align: left;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-      padding-left: 70px;
-      padding-right: 70px; }
-    .form--upload .form__input, .form--upload .form__textarea, .form--upload .form__select {
-      border: 1px solid #dcdcdc;
-      color: #747474; }
   .form--search .form__input {
     border-radius: 3px;
     margin-right: 15px;
@@ -1247,6 +1229,57 @@ img {
       max-width: 180px; }
     .form--subscribe-mini .form-group:nth-of-type(1) {
       padding-right: 15px; }
+  .form--upload {
+    background-color: #ffffff;
+    display: none; }
+    .form--upload .form__title {
+      color: #000000;
+      text-align: center;
+      margin: 15px 0;
+      padding: 0 35px 20px; }
+    .form--upload .form-group {
+      text-align: left;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      padding-left: 70px;
+      padding-right: 70px; }
+    .form--upload .form__input, .form--upload .form__textarea, .form--upload .form__select {
+      border: 1px solid #dcdcdc;
+      color: #747474; }
+  .form--application {
+    background-color: #ffffff;
+    display: none; }
+    .form--application .form__title {
+      color: #000000;
+      text-align: center;
+      margin: 15px 0;
+      padding: 0 35px 20px; }
+    .form--application .form-group {
+      text-align: left;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      padding-left: 70px;
+      padding-right: 70px; }
+    .form--application .form__input, .form--application .form__textarea, .form--application .form__select {
+      border: 1px solid #dcdcdc;
+      color: #747474; }
+  .form--call {
+    background-color: #ffffff;
+    display: none; }
+    .form--call .form__title {
+      color: #000000;
+      text-align: center;
+      margin: 15px 0;
+      padding: 0 35px 20px; }
+    .form--call .form-group {
+      text-align: left;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+      padding-left: 70px;
+      padding-right: 70px; }
+    .form--call .form__input, .form--call .form__textarea, .form--call .form__select {
+      border: 1px solid #dcdcdc;
+      color: #747474; }
 
 .has-success input, .has-success textarea {
   outline: 1px solid #00ff00;
@@ -1610,7 +1643,7 @@ img {
     .offer-item--your-idea .form--offers {
       display: none;
       background-color: #669cd6; }
-  .offer-item--form-blue {
+  .offer-item--your-idea-form {
     padding: 0;
     outline: none; }
   .offer-item--selection {
@@ -1627,6 +1660,11 @@ img {
     color: #ffffff; }
     .offer-item--selection .offer-item__title {
       color: #ffffff; }
+    .offer-item--selection .form--offers {
+      display: none; }
+  .offer-item--selection-form {
+    padding: 0;
+    outline: none; }
   .offer-item__link {
     color: #747474; }
     .offer-item__link:hover, .offer-item__link:focus {
