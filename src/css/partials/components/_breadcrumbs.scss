@@ -1,11 +1,13 @@
 .breadcrumbs{
   font-size: $font-size-small;
   padding: 15px 0;
-  a{
-    margin-right: 10px;
+  &__inner{
+    margin: 0 -10px;
   }
-  a:not(:first-child){
-    margin-left: 10px;
+
+  a{
+    display: inline-block;
+    margin: 0 10px;
   }
   span{
     display: inline-block;

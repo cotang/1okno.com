@@ -18,54 +18,36 @@
   &__gallery{
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
   &__person{
     margin-top: 5px;
-    flex: 0 0 16.6666%;
-    max-width: 16.6666%;
+    flex: 0 0 16.66%;
+    max-width: 16.66%;
+    @include mq($from:md, $until:lg){
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      margin-bottom: 10px;
+    }
+    @include mq($from:sm, $until:md){
+      flex: 0 0 66.66%;
+      max-width: 66.66%;
+      margin-bottom: 10px;
+    }
+    @include mq($from:xs, $until:sm){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
   }
-
   &__description{
     background-color: $grey-marks;
     padding: 20px 20px;
     border-radius: 32px;
     margin: 35px 0 10px;
   }
-  &__form-title{
-    margin: 0;
-    padding-top: 20px;
-    font-size: $font-size-big;
-    background-color: $blue;
-    color: $text-color-white;
-    @include font-family('Proxima Nova Regular', normal, normal);    
-  }
   &__form{
     margin-top: 15px;
-    .form{
-      background-color: $blue;
-      color: $text-color-white;
-      padding-left: 10px;
-      padding-right: 10px;
-      text-align: left;
-      padding-bottom: 10px;
-    }
-    // form{
-    //   align-items: center;
-    // }
-    .form-group{
-      flex: 1 0 auto;
-      padding-left: 10px;
-      padding-right: 10px;
-      &:last-of-type{
-        flex: 0 0 auto;
-      }
-    }
-    .btn{
-      padding-left: 30px;
-      padding-right: 30px;
-    }
   }
-
-
 }

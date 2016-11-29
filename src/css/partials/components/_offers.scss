@@ -33,6 +33,8 @@
   }
 }
 .offer-item{
+  @include transition();
+  min-height: 400px;
   margin-top: 50px;
   text-align: center;
   flex: 0 0 30%;
@@ -45,6 +47,10 @@
     flex: 0 0 100%;
     max-width: 100%;
   }
+  &:hover, &:focus {
+    transform: scale(1.1);
+  }
+
   &--form{
     display: flex;
   }
@@ -67,6 +73,14 @@
     .offer-item__title{
       color: $text-color-white;
     }
+    .form--offers{
+      display: none;
+      background-color: $blue;
+    }
+  }
+  &--form-blue{
+    padding: 0;
+    outline: none;
   }
   &--selection{
     display: flex;

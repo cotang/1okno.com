@@ -31,7 +31,6 @@ jQuery(document).ready(function($){
     ]
   });
 
-
   $('.hamburger').click(function(e) { 
       e.preventDefault();
       $(this).closest('.header').find('.nav').toggle();
@@ -83,43 +82,21 @@ jQuery(document).ready(function($){
     return false;
   });
 
+  /* Form offers blue */
+  var offerYourIdea = $('.offer-item--your-idea')
+  $(offerYourIdea).find('.btn').click( function(e){
+    e.preventDefault();
+    $(offerYourIdea).addClass('offer-item--form-blue');
+    $(offerYourIdea).find('.offer-item__inner').hide();
+    $(offerYourIdea).find('.form--offers').show();
+    $(offerYourIdea).find('.btn').removeClass('btn--red').addClass('btn--blue');
+  });
 
-
-
-  // $('.menu-services__close').click(function(e) { 
-  //     e.preventDefault();
-  //     $(this).closest('.menu-services').hide();
-  // });
-
-  // var servicesMoreLink = $('.services-type__item--more .services-type__link');
-  // $(servicesMoreLink).click(function(e) { 
-  //     e.preventDefault();
-  //     $(this).closest('.services-type__item--more').hide();
-  //     $(this).closest('.services-type__list').find('.services-type__item--hidden').show();
-  // });
-
-  // /* Faq accordion */
-  // $('.faq__ask').click(function(){
-  //   if($(this).next('.faq__text').is(":visible")) {
-  //     $(this).next('.faq__text').slideUp();
-  //     $(this).closest('.faq__block').find('.faq__icon--active').removeClass('faq__icon--active');
-  //   } else {
-  //     $(this).closest('.faq').find('.faq__text').slideUp();
-  //     $(this).siblings('.faq__text').slideDown();
-  //     $(this).closest('.faq').find('.faq__icon--active').removeClass('faq__icon--active');
-  //     $(this).closest('.faq__block').find('.faq__icon').addClass('faq__icon--active');
-  //   }
-  // }); 
-
-  // /* search */
-  // $('.social-links__link--search').click(function(e) { 
-  //     e.preventDefault();    
-  //     $('.search').show();
-  // });
-  // $('.search__close').click(function(e) { 
-  //     e.preventDefault();    
-  //     $('.search').hide();
-  // });
+  /* Marks close */
+  $('.marks__close').click( function(e){
+    e.preventDefault();
+    $(this).closest('.marks__item').remove();
+  });
 
   // /* плавный скролл наверх */
   // $('.up').click(function () {
@@ -152,13 +129,6 @@ jQuery(document).ready(function($){
   //   }
   // });
 
-  // /* hamburger */
-  // $('.hamburger').click(function(e) { 
-  //     e.preventDefault();    
-  //     $('.nav__wrapper').toggle();
-  // });
-
-
   /* 404 - sticky footer */
   // var footerHeight = $('.footer').outerHeight();
   // if ($(window).height() >= $('body').height()){
@@ -166,17 +136,6 @@ jQuery(document).ready(function($){
   //   $('body').css('padding-bottom', footerHeight+'px');
   //   $('.footer').addClass('footer--stuck-to-bottom');
   // }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

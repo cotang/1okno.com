@@ -16,9 +16,10 @@ include ../abstracts/bemto/bemto.pug
       - }
     +e.description Специалисты центра подготовят документы для открытия бизнеса, помогут просчитать риски и провести сертификацию
     +e.form
-      +e.H3.form-title Обратитетсь к нам за комплексной помощью или только по оформлению этой бизнес-идеи
-      +b.SECTION.form
+      // Form expert help
+      +b.SECTION.form--expert-help
         form(action='', method='')
+          +e.H3.title Обратитетсь к нам за комплексной помощью или только по оформлению этой бизнес-идеи
           .form-group.field-name.required
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя')
             p.help-block Ошибка заполнения поля формы

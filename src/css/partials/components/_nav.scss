@@ -1,14 +1,6 @@
 .nav{
-  // position: relative;
-  &__wrapper{
-    margin: 0 30px;
-    @include mq($from:xs, $until:xl){
-      margin: 0;
-    } 
-    // @include mq($from:xs, $until:lg){
-    //   display: none;
-    //   text-align: center;
-    // }    
+  @include mq($from:xs, $until:lg){
+    display: none;
   }
   &__list{   
     @include font-family('Proxima Nova Light', normal, normal); 

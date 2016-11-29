@@ -8,31 +8,39 @@ block content
     // Breadcrumbs
     +b.breadcrumbs
       .container
-        a(href="index.html") Главная
-        ='>'
-        a(href="page-business.html") Бизнес-планы
-        ='>'
-        a(href="page-business.html") Услуги для населения
-        ='>'
-        span Бизнес-план для детской парикмахерской
+        +e.inner
+          a(href="index.html") Главная
+          ='>'
+          a(href="page-business.html") Бизнес-планы
+          ='>'
+          a(href="page-business.html") Услуги для населения
+          ='>'
+          span Бизнес-план для детской парикмахерской
 
     // Marks
     +b.marks
       .container
         +e.UL.list
-          +e.item Услуги для населения
+          +e.item 
+            +e.link(href="page-services.html") Услуги для населения
             +e.close(href="#")
-          +e.item ОКПД2
+          +e.item 
+            +e.link(href="page-services.html") ОКПД2
             +e.close(href="#")
-          +e.item Услуги для населения
+          +e.item 
+            +e.link(href="page-services.html") Услуги для населения
             +e.close(href="#")
-          +e.item ОКПД2
+          +e.item 
+            +e.link(href="page-services.html") ОКПД2
             +e.close(href="#")
-          +e.item Услуги для населения
+          +e.item 
+            +e.link(href="page-services.html") Услуги для населения
             +e.close(href="#")
-          +e.item ОКПД2
+          +e.item 
+            +e.link(href="page-services.html") ОКПД2
             +e.close(href="#")
-          +e.item ОКПД2
+          +e.item 
+            +e.link(href="page-services.html") ОКПД2
             +e.close(href="#")
 
     +e.content
@@ -77,9 +85,11 @@ block content
                     +e.H3.type
                       +e.link(href="#") Резюме проекта
                     +e.text
-                      p Целью настоящего проекта является открытие детской парикмахерской в городе с населением более 1 млн. человек для удовлетворения потребностей маленьких горожан  в  парикмахерских услугах. 
+                      p Целью настоящего проекта является открытие детской парикмахерской в городе с населением более 1 млн. человек для удовлетворения потребностей маленьких горожан в парикмахерских услугах. 
                       p Клиентами парикмахерской станут дети возрастом от 1 года до 14 лет, а также их родители, желающие подстричься вместе с ребенком. 
-                      p В число основных услуг детской парикмахерской войдут:
+                      p В число 
+                        b основных услуг 
+                        | детской парикмахерской войдут:
                       ul
                         li стандартные стрижки для девочек и мальчиков;
                         li модельные стрижки;
@@ -90,7 +100,9 @@ block content
                         li детский маникюр;
                         li детский макияж;
                         li прокол ушей.
-                      p Преимуществом проекта по сравнению с традиционными парикмахерскими является узкая специализация, которая подразумевает более высокий уровень сервиса для детей, подготовленный персонал, умеющий работать с капризными клиентами, адаптированный формат и оформление, позволяющий детям связывать поход в парикмахерскую с увлекательным и веселым времяпрепровождением.
+                      p Преимуществом проекта по сравнению с традиционными парикмахерскими является 
+                        b узкая специализация
+                        | , которая подразумевает более высокий уровень сервиса для детей, подготовленный персонал, умеющий работать с капризными клиентами, адаптированный формат и оформление, позволяющий детям связывать поход в парикмахерскую с увлекательным и веселым времяпрепровождением.
                   +e.item
                     +e.H3.type
                       +e.link(href="#") Описание отрасли и компании
@@ -148,11 +160,11 @@ block content
 
               +e.options
                 +e.btn
-                  +b.A.btn--red(href="#") Скачать в pdf
+                  +b.A.btn--red.--border-red(target="_blank", href="#") Скачать в pdf
                 +b.share Поделиться
-                  +b.A.btn--vk(href="#")                  
-                  +b.A.btn--fb(href="#")  
-                  +b.A.btn--tw(href="#")  
+                  +b.A.btn--vk(target="_blank", href="#")                  
+                  +b.A.btn--fb(target="_blank", href="#")  
+                  +b.A.btn--tw(target="_blank", href="#")  
 
 
           .col-xs-12.col-lg-4
@@ -162,30 +174,44 @@ block content
               +e.UL.list
                 +b.offered-services-type
                   +e.INPUT.input(type='checkbox', id='registration',  checked)
-                  +e.label(for='registration')
-                    +e.icon
-                    +e.H3.title Регистрация ООО/ИП/НКО
+                  +e.block-title
+                    +e.LABEL.label(for='registration')
+                      +e.icon
+                    +e.H3.title
+                      +e.link(href='page-services.html') Регистрация ООО/ИП/НКО
                   +e.UL.list
-                    +e.item Подготовка документов
-                    +e.item Расчетный счет
-                    +e.item Юридический адрес                      
+                    +e.item
+                      +e.link(href='page-services.html') Подготовка документов
+                    +e.item
+                      +e.link(href='page-services.html') Расчетный счет
+                    +e.item
+                      +e.link(href='page-services.html') Юридический адрес                      
                 +b.offered-services-type
                   +e.INPUT.input(type='checkbox', id='certification')
-                  +e.label(for='certification')
-                    +e.icon              
-                    +e.H3.title Сертификация продукции и услуг
+                  +e.block-title
+                    +e.LABEL.label(for='certification')
+                      +e.icon              
+                    +e.H3.title
+                      +e.link(href='page-services.html') Сертификация продукции и услуг
                   +e.UL.list
-                    +e.item Консультация
-                    +e.item Проведение испытаний
-                    +e.item Доставка сертификата  
+                    +e.item
+                      +e.link(href='page-services.html') Консультация
+                    +e.item
+                      +e.link(href='page-services.html') Проведение испытаний
+                    +e.item
+                      +e.link(href='page-services.html') Доставка сертификата  
                 +b.offered-services-type                  
                   +e.INPUT.input(type='checkbox', id='bookeeping')
-                  +e.label(for='bookeeping') 
-                    +e.icon
-                    +e.H3.title Бухгалтерские услуги
+                  +e.block-title
+                    +e.LABEL.label(for='bookeeping') 
+                      +e.icon
+                    +e.H3.title
+                      +e.link(href='page-services.html') Бухгалтерские услуги
                   +e.UL.list
-                    +e.item Консультация
-                    +e.item Составление и сдача отчетности
+                    +e.item
+                      +e.link(href='page-services.html') Консультация
+                    +e.item
+                      +e.link(href='page-services.html') Составление и сдача отчетности
               +e.total Итог
                 +e.SPAN.total-money 15 000 руб.
 

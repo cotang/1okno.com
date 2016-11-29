@@ -112,10 +112,19 @@
               </ul>
               <!-- Search-->
               <div class="search">
-                <form class="search__form">
-                  <input class="search__input" type="text" name="Вопрос" placeholder="Ваш вопрос" />
-                  <button class="btn btn--red" type="submit">Найти</button>
-                </form>
+                <!-- Form search-->
+                <section class="form form--search">
+                  <form action="" method="">
+                    <div class="form-group field-question required">
+                      <input class="form__input" type="text" name="Вопрос" placeholder="Ваш вопрос" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--red" type="submit">Найти</button>
+                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                    </div>
+                  </form>
+                </section>
               </div>
             </div>
           </div>
@@ -337,25 +346,22 @@
                       </div>
                     </article>
                   </div>
-                  <!-- Subscribe section-->
-                  <div class="subscribe-section">
-                    <h3 class="subscribe-section__title">Подписаться на новые вопросы по сертификации</h3>
-                    <div class="subscribe-section__form">
-                      <!-- Form subscribe-->
-                      <section class="form form--subscribe">
-                        <form action="" method="">
-                          <div class="form-group field-email required">
-                            <div>Ваш email*</div>
-                            <input class="form__input" type="email" name="Email" />
-                            <p class="help-block">Ошибка заполнения поля формы</p>
-                          </div>
-                          <div class="form-group">
-                            <button class="btn btn--blue btn--border-white" type="submit">Отправить</button>
-                            <p class="help-block help-block-success">Ваша заявка отправлена</p>
-                          </div>
-                        </form>
-                      </section>
-                    </div>
+                  <div class="expert-type__subscribe">
+                    <!-- Form subscribe mini-->
+                    <section class="form form--subscribe-mini">
+                      <form action="" method="">
+                        <h3 class="form__title">Подписаться на новые вопросы по сертификации</h3>
+                        <div class="form-group field-email required">
+                          <div>Ваш email*</div>
+                          <input class="form__input" type="email" name="Email" />
+                          <p class="help-block">Ошибка заполнения поля формы</p>
+                        </div>
+                        <div class="form-group">
+                          <button class="btn btn--blue btn--border-white" type="submit">Отправить</button>
+                          <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                        </div>
+                      </form>
+                    </section>
                   </div>
                 </div>
               </div>
@@ -373,10 +379,10 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12 col-lg-6">
-                <!-- Form question-->
-                <section class="form-question">
-                  <h2 class="form-question__title">Задайте вопрос специалисту</h2>
-                  <div class="form-question__form">
+                <!-- Ask expert-->
+                <section class="ask-expert">
+                  <h2 class="ask-expert__title">Задайте вопрос специалисту</h2>
+                  <div class="ask-expert__form">
                     <!-- Form question-->
                     <section class="form form--question">
                       <form action="" method="">
@@ -444,7 +450,7 @@
                           <div class="steps__icon"></div>
                           <div class="steps__index">Шаг 1 </div>
                           <div class="steps__text">Для начала работы с нами
-                            <a href="/">оставьте заявку </a>
+                            <a href="#">оставьте заявку </a>
                           </div>
                         </div>
                         <div class="steps__item">
@@ -458,7 +464,7 @@
                           <div class="steps__text">Вышлите скан копий для оформления </div>
                         </div>
                         <div class="steps__btn">
-                          <a class="btn btn--border-red btn--color-red" href="#">Узнать подробнее</a>
+                          <a class="btn btn--border-red btn--color-red" href="page-services.html">Узнать подробнее</a>
                         </div>
                       </div>
                     </div>

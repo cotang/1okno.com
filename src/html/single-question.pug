@@ -8,11 +8,12 @@ block content
     // Breadcrumbs
     +b.breadcrumbs
       .container
-        a(href="index.html") Главная
-        ='>'
-        a(href="page-questions.html") Вопросы экспертам
-        ='>'
-        span Декларация соответствия
+        +e.inner
+          a(href="index.html") Главная
+          ='>'
+          a(href="page-questions.html") Вопросы экспертам
+          ='>'
+          span Декларация соответствия
 
     .container
       .row
@@ -55,24 +56,23 @@ block content
               span.number (15) 
 
           // Your comment
-          +b.your-comment
-            +e.H3.title Оставьте свой комментарий 
-            +e.form
-              // Form comment
-              +b.SECTION.form--comment
-                form(action='', method='')
-                  .form-group.field-comment.required
-                    +e.TEXTAREA.textarea(name='Вопрос', placeholder='Текст комментария')
-                    p.help-block Ошибка заполнения поля формы
-                  .form-group.field-name
-                    +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя')
-                    p.help-block Ошибка заполнения поля формы
-                  .form-group.field-email.required
-                    +e.INPUT.input(type='email', name='Email', placeholder='Ваш email*')
-                    p.help-block Ошибка заполнения поля формы
-                  .form-group
-                    +b.BUTTON.btn--red(type='submit') Отправить
-                    p.help-block.help-block-success Ваш комментарий отправлен
+          +b.your-comment            
+            // Form comment
+            +b.SECTION.form--comment
+              form(action='', method='')
+                +e.H3.title Оставьте свой комментарий 
+                .form-group.field-comment.required
+                  +e.TEXTAREA.textarea(name='Вопрос', placeholder='Текст комментария')
+                  p.help-block Ошибка заполнения поля формы
+                .form-group.field-name
+                  +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя')
+                  p.help-block Ошибка заполнения поля формы
+                .form-group.field-email.required
+                  +e.INPUT.input(type='email', name='Email', placeholder='Ваш email*')
+                  p.help-block Ошибка заполнения поля формы
+                .form-group
+                  +b.BUTTON.btn--red(type='submit') Отправить
+                  p.help-block.help-block-success Ваш комментарий отправлен
 
           // Comments
           +b.SECTION.comments
@@ -100,8 +100,8 @@ block content
       .container
         .row
           .col-xs-12.col-lg-6
-            // Form question
-            include partials/components/_form-question.pug
+            // Ask expert
+            include partials/components/_ask-expert.pug
           .col-xs-12.col-lg-6
             // Specialists
             include partials/components/_specialists.pug

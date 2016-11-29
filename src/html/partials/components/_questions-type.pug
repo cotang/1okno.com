@@ -47,21 +47,19 @@ include ../abstracts/mixins/_member-item.pug
             +memberItem
             +memberItem
             +memberItem
-            +memberItem
-          // Subscribe section
-          +b.subscribe-section
-            +e.H3.title Подписаться на новые вопросы по сертификации
-            +e.form
-              // Form subscribe
-              +b.SECTION.form--subscribe
-                form(action='', method='')
-                  .form-group.field-email.required
-                    div Ваш email*
-                    +e.INPUT.input(type='email', name='Email')
-                    p.help-block Ошибка заполнения поля формы
-                  .form-group
-                    +b.BUTTON.btn--blue.--border-white(type='submit') Отправить
-                    p.help-block.help-block-success Ваша заявка отправлена
+            +memberItem          
+          +e.subscribe
+            // Form subscribe mini
+            +b.SECTION.form--subscribe-mini
+              form(action='', method='')
+                +e.H3.title Подписаться на новые вопросы по сертификации
+                .form-group.field-email.required
+                  div Ваш email*
+                  +e.INPUT.input(type='email', name='Email')
+                  p.help-block Ошибка заполнения поля формы
+                .form-group
+                  +b.BUTTON.btn--blue.--border-white(type='submit') Отправить
+                  p.help-block.help-block-success Ваша заявка отправлена
 
     +b.pagination
       +e.A.number--current(href="page-type-questions.html") 1

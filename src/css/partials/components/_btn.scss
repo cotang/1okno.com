@@ -8,12 +8,19 @@
   color: $text-color-white;
   padding: 8px 20px;
   margin: 0;
-  // width: 100%;
   &:hover, &:focus, &:active{
     color: $text-color-white;
     text-decoration: none;
   }
 
+  // &--arrow{
+  //   &:after{
+  //     content: '→';
+  //     display: inline-block;
+  //     vertical-align: text-bottom;
+  //     margin-left: 5px;
+  //   }     
+  // }
   &--header{
     &:hover, &:focus, &:active{
       border: 1px solid $blue;

@@ -133,35 +133,44 @@
         <!-- Breadcrumbs-->
         <div class="breadcrumbs">
           <div class="container">
-            <a href="index.html">Главная</a>&gt;
-            <a href="page-business.html">Бизнес-планы</a>&gt;
-            <a href="page-business.html">Услуги для населения</a>&gt;
-            <span>Бизнес-план для детской парикмахерской</span>
+            <div class="breadcrumbs__inner">
+              <a href="index.html">Главная</a>&gt;
+              <a href="page-business.html">Бизнес-планы</a>&gt;
+              <a href="page-business.html">Услуги для населения</a>&gt;
+              <span>Бизнес-план для детской парикмахерской</span>
+            </div>
           </div>
         </div>
         <!-- Marks-->
         <div class="marks">
           <div class="container">
             <ul class="marks__list">
-              <li class="marks__item">Услуги для населения
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">Услуги для населения</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">ОКПД2
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">ОКПД2</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">Услуги для населения
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">Услуги для населения</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">ОКПД2
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">ОКПД2</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">Услуги для населения
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">Услуги для населения</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">ОКПД2
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">ОКПД2</a>
                 <a class="marks__close" href="#"></a>
               </li>
-              <li class="marks__item">ОКПД2
+              <li class="marks__item">
+                <a class="marks__link" href="page-services.html">ОКПД2</a>
                 <a class="marks__close" href="#"></a>
               </li>
             </ul>
@@ -220,7 +229,8 @@
                         <div class="business-description__text">
                           <p>Целью настоящего проекта является открытие детской парикмахерской в городе с населением более 1 млн. человек для удовлетворения потребностей маленьких горожан в парикмахерских услугах. </p>
                           <p>Клиентами парикмахерской станут дети возрастом от 1 года до 14 лет, а также их родители, желающие подстричься вместе с ребенком. </p>
-                          <p>В число основных услуг детской парикмахерской войдут:</p>
+                          <p>В число
+                            <b>основных услуг </b>детской парикмахерской войдут:</p>
                           <ul>
                             <li>стандартные стрижки для девочек и мальчиков;</li>
                             <li>модельные стрижки;</li>
@@ -232,8 +242,9 @@
                             <li>детский макияж;</li>
                             <li>прокол ушей.</li>
                           </ul>
-                          <p>Преимуществом проекта по сравнению с традиционными парикмахерскими является узкая специализация, которая подразумевает более высокий уровень сервиса для детей, подготовленный персонал, умеющий работать с капризными клиентами,
-                            адаптированный формат и оформление, позволяющий детям связывать поход в парикмахерскую с увлекательным и веселым времяпрепровождением.</p>
+                          <p>Преимуществом проекта по сравнению с традиционными парикмахерскими является
+                            <b>узкая специализация</b>, которая подразумевает более высокий уровень сервиса для детей, подготовленный персонал, умеющий работать с капризными клиентами, адаптированный формат и оформление, позволяющий детям связывать поход
+                            в парикмахерскую с увлекательным и веселым времяпрепровождением.</p>
                         </div>
                       </li>
                       <li class="business-description__item">
@@ -321,12 +332,12 @@
                   </section>
                   <div class="business__options">
                     <div class="business__btn">
-                      <a class="btn btn--red" href="#">Скачать в pdf</a>
+                      <a class="btn btn--red btn--border-red" target="_blank" href="#">Скачать в pdf</a>
                     </div>
                     <div class="share">Поделиться
-                      <a class="btn btn--vk" href="#"> </a>
-                      <a class="btn btn--fb" href="#"> </a>
-                      <a class="btn btn--tw" href="#"> </a>
+                      <a class="btn btn--vk" target="_blank" href="#"> </a>
+                      <a class="btn btn--fb" target="_blank" href="#"> </a>
+                      <a class="btn btn--tw" target="_blank" href="#"> </a>
                     </div>
                   </div>
                 </section>
@@ -338,37 +349,65 @@
                   <ul class="complex-offered-services__list">
                     <li class="offered-services-type">
                       <input class="offered-services-type__input" type="checkbox" id="registration" checked="checked" />
-                      <label class="offered-services-type__label" for="registration">
-                        <span class="offered-services-type__icon"></span>
-                        <h3 class="offered-services-type__title">Регистрация ООО/ИП/НКО</h3>
-                      </label>
+                      <div class="offered-services-type__block-title">
+                        <label class="offered-services-type__label" for="registration">
+                          <span class="offered-services-type__icon"></span>
+                        </label>
+                        <h3 class="offered-services-type__title">
+                          <a class="offered-services-type__link" href="page-services.html">Регистрация ООО/ИП/НКО</a>
+                        </h3>
+                      </div>
                       <ul class="offered-services-type__list">
-                        <li class="offered-services-type__item">Подготовка документов</li>
-                        <li class="offered-services-type__item">Расчетный счет</li>
-                        <li class="offered-services-type__item">Юридический адрес </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Подготовка документов</a>
+                        </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Расчетный счет</a>
+                        </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Юридический адрес </a>
+                        </li>
                       </ul>
                     </li>
                     <li class="offered-services-type">
                       <input class="offered-services-type__input" type="checkbox" id="certification" />
-                      <label class="offered-services-type__label" for="certification">
-                        <span class="offered-services-type__icon"> </span>
-                        <h3 class="offered-services-type__title">Сертификация продукции и услуг</h3>
-                      </label>
+                      <div class="offered-services-type__block-title">
+                        <label class="offered-services-type__label" for="certification">
+                          <span class="offered-services-type__icon"> </span>
+                        </label>
+                        <h3 class="offered-services-type__title">
+                          <a class="offered-services-type__link" href="page-services.html">Сертификация продукции и услуг</a>
+                        </h3>
+                      </div>
                       <ul class="offered-services-type__list">
-                        <li class="offered-services-type__item">Консультация</li>
-                        <li class="offered-services-type__item">Проведение испытаний</li>
-                        <li class="offered-services-type__item">Доставка сертификата </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Консультация</a>
+                        </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Проведение испытаний</a>
+                        </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Доставка сертификата </a>
+                        </li>
                       </ul>
                     </li>
                     <li class="offered-services-type">
                       <input class="offered-services-type__input" type="checkbox" id="bookeeping" />
-                      <label class="offered-services-type__label" for="bookeeping">
-                        <span class="offered-services-type__icon"></span>
-                        <h3 class="offered-services-type__title">Бухгалтерские услуги</h3>
-                      </label>
+                      <div class="offered-services-type__block-title">
+                        <label class="offered-services-type__label" for="bookeeping">
+                          <span class="offered-services-type__icon"></span>
+                        </label>
+                        <h3 class="offered-services-type__title">
+                          <a class="offered-services-type__link" href="page-services.html">Бухгалтерские услуги</a>
+                        </h3>
+                      </div>
                       <ul class="offered-services-type__list">
-                        <li class="offered-services-type__item">Консультация</li>
-                        <li class="offered-services-type__item">Составление и сдача отчетности</li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Консультация</a>
+                        </li>
+                        <li class="offered-services-type__item">
+                          <a class="offered-services-type__link" href="page-services.html">Составление и сдача отчетности</a>
+                        </li>
                       </ul>
                     </li>
                   </ul>
@@ -472,9 +511,10 @@
             </div>
             <div class="expert-help__description">Специалисты центра подготовят документы для открытия бизнеса, помогут просчитать риски и провести сертификацию</div>
             <div class="expert-help__form">
-              <h3 class="expert-help__form-title">Обратитетсь к нам за комплексной помощью или только по оформлению этой бизнес-идеи</h3>
-              <section class="form">
+              <!-- Form expert help-->
+              <section class="form form--expert-help">
                 <form action="" method="">
+                  <h3 class="form__title">Обратитетсь к нам за комплексной помощью или только по оформлению этой бизнес-идеи</h3>
                   <div class="form-group field-name required">
                     <input class="form__input" type="text" name="Имя" placeholder="Ваше имя" />
                     <p class="help-block">Ошибка заполнения поля формы</p>
@@ -500,7 +540,7 @@
                   <div class="steps__icon"></div>
                   <div class="steps__index">Шаг 1 </div>
                   <div class="steps__text">Для начала работы с нами
-                    <a href="/">оставьте заявку </a>
+                    <a href="#">оставьте заявку </a>
                   </div>
                 </div>
                 <div class="steps__item">
@@ -514,7 +554,7 @@
                   <div class="steps__text">Вышлите скан копий для оформления </div>
                 </div>
                 <div class="steps__btn">
-                  <a class="btn btn--border-red btn--color-red" href="#">Узнать подробнее</a>
+                  <a class="btn btn--border-red btn--color-red" href="page-services.html">Узнать подробнее</a>
                 </div>
               </div>
             </div>

@@ -1,6 +1,5 @@
 .specialists{
-  margin-right: 60px;
- 
+
   &__title{
     font-size: $font-size-title;
     @include font-family('Proxima Nova Light', normal, normal);
@@ -17,11 +16,16 @@
   }
   &__gallery{
     display: flex;
+    flex-wrap: wrap;
   }
   &__person{
-    flex: 0 0 33.3333%;
-    max-width: 33.3333%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     text-align: center;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
   &__name{
     @include font-family('Proxima Nova Light', normal, normal);

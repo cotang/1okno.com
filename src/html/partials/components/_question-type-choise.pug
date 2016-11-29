@@ -13,8 +13,12 @@ include ../abstracts/bemto/bemto.pug
           +e.link(href="page-type-questions.html") Бухгалтерские услуги
       // Search
       +b.search
-        +e.FORM.form
-          +e.INPUT.input(type='text', name='Вопрос', placeholder="Ваш вопрос")
-          +b.BUTTON.btn--red(type='submit') Найти
-
-
+        // Form search
+        +b.SECTION.form--search
+          form(action='', method='')
+            .form-group.field-question.required
+              +e.INPUT.input(type='text', name='Вопрос', placeholder="Ваш вопрос")
+              p.help-block Ошибка заполнения поля формы
+            .form-group
+              +b.BUTTON.btn--red(type='submit') Найти
+              p.help-block.help-block-success Ваша заявка отправлена

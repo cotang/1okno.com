@@ -83,32 +83,6 @@
 
 .your-comment{
   margin-top: 30px;
-  &__title{
-    @include font-family('Proxima Nova Regular', normal, normal);
-    font-size: $font-size-big;    
-    color: $text-black;
-    margin: 0 0 15px;
-  }
-  &__form{
-    .form-group{
-      margin-right: 20px;
-      &:first-of-type{
-        flex: 0 0 100%;
-        margin-right: 0;
-      }
-    }
-    .form__input, .form__textarea, .form__select{
-      min-width: 250px;
-      border: 1px solid $grey-border;
-      color: $text-color;
-      &::-webkit-input-placeholder{
-        color: $text-color;         
-      }       
-      &::placeholder{
-        color: $text-color;         
-      }
-    }
-  }
 }
 .comments{
   &__item{

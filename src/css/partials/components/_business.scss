@@ -1,4 +1,5 @@
 .business{
+  margin-top: 20px;
   &__img{
     position: relative;
     img{
@@ -17,18 +18,30 @@
     max-width: 70%;
     padding: 30px 20px 20px;
     line-height: 1;
+    @include mq($from:xs, $until:md){
+      position: static;
+      max-width: 100%;
+    } 
   }
 
   &__options{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 30px;
     margin-left: 35px;
   }
+  &__btn{
+    margin-bottom: 20px;
+    margin-right: 90px;
+  }
 }
 
 .key-data{
-  margin-top: 35px;
+  background-color: $pale;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-top: 25px;
   &__title{
     padding-left: 20px;
     padding-bottom: 10px;
@@ -43,6 +56,9 @@
     margin: 15px 0 0;
     list-style-type: none;
     columns: 2;
+    @include mq($from:xs, $until:md){
+      columns: 1;
+    } 
   } 
   &__item{
     display: flex;
@@ -61,7 +77,7 @@
 }
 
 .business-description{
-  margin-top: 60px;
+  margin-top: 20px;
   &__title{
     padding-left: 20px;
     padding-bottom: 10px;
@@ -78,6 +94,9 @@
   }  
   &__item{
     padding-left: 35px;
+    @include mq($from:xs, $until:md){
+      padding-left: 20px;
+    }
     &--active{
       .business-description__text{
         display: block;
@@ -104,6 +123,10 @@
   &__text{
     padding-left: 40px;
     display: none;
+    @include mq($from:xs, $until:md){
+      padding-left: 0;
+    } 
+
     li{
       list-style-type: none;
       &:before{
@@ -119,7 +142,7 @@
 }
 
 .share{
-  margin-left: 90px;
+  margin-bottom: 20px;
   .btn{
     margin-left: 10px;
   }

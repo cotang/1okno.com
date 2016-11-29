@@ -6,25 +6,24 @@ include ../abstracts/bemto/bemto.pug
       .col-xs-12.col-lg-8.offset-lg-2
         +e.H2.title Ждем ваших вопросов здесь
         +e.P.text или по телефону 8 (800) 123 00 00
-        +e.form
-          // Form question ????
-          +b.SECTION.form--question
-            form(action='', method='')
-              .form-group.field-name.required
-                div Ваше имя*
-                +e.INPUT.input(type='text', name='Имя')
-                p.help-block Ошибка заполнения поля формы
-              .form-group.field-tel
-                div Ваш телефон
-                +e.INPUT.input(type='tel', name='Телефон')
-                p.help-block Ошибка заполнения поля формы
-              .form-group.field-email.required
-                div Ваш email*
-                +e.INPUT.input(type='email', name='Email')
-                p.help-block Ошибка заполнения поля формы
-              .form-group
-                +b.BUTTON.btn--red(type='submit') Отправить
-                p.help-block.help-block-success Ваша заявка отправлена
+        // Form question 
+        +b.SECTION.form--your-info
+          form(action='', method='')
+            .form-group.field-name.required
+              div Ваше имя*
+              +e.INPUT.input(type='text', name='Имя')
+              p.help-block Ошибка заполнения поля формы
+            .form-group.field-tel
+              div Ваш телефон
+              +e.INPUT.input(type='tel', name='Телефон')
+              p.help-block Ошибка заполнения поля формы
+            .form-group.field-email.required
+              div Ваш email*
+              +e.INPUT.input(type='email', name='Email')
+              p.help-block Ошибка заполнения поля формы
+            .form-group
+              +b.BUTTON.btn--red(type='submit') Отправить
+              p.help-block.help-block-success Ваша заявка отправлена
 
        
  

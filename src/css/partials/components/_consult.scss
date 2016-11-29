@@ -46,7 +46,8 @@
     margin-bottom: 10px;
   }  
   &__position{
-    color: $text-black;
+    display: block;
+    // color: $text-black;
     @include font-family('Proxima Nova Semibold', normal, normal);
     margin-bottom: 5px;
   }

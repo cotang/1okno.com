@@ -49,28 +49,5 @@
     z-index: 9;
     width: 100%;
     max-width: 570px;
-
-    .form{
-      background-color: $white;
-      display: none;
-    }
-    .form__title{
-      letter-spacing: normal;
-      flex: 0 0 100%;
-      color: $text-black;
-      text-transform: none;
-      text-align: center;
-    }
-
-    .form-group{
-      text-align: left;
-      flex: 0 0 100%;
-      padding-left: 70px;
-      padding-right: 70px;
-    }
-    .form__input, .form__textarea, .form__select{
-      border: 1px solid $grey-border;
-      color: $text-color;
-    }
   }
 }

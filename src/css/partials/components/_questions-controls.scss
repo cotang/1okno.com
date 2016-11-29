@@ -1,5 +1,6 @@
 .questions-controls{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 20px 0;
   font-size: $font-size-big;
@@ -8,6 +9,9 @@
     margin-right: 20px;
     position: relative;
     padding: 5px 0;
+    @include mq($from:xs, $until:lg){
+      padding: 10px 0;
+    }
   }
   &__sort-link{
     color: $red;
