@@ -15,7 +15,7 @@ include ../abstracts/bemto/bemto.pug
 
         .col-xs-12.col-sm-5.offset-sm-2.col-md-3.offset-md-5.col-lg-2.offset-lg-0.flex-lg-last
           +e.btn
-            +b.A.btn--blue.--footer(href="#") Свяжитесь со мной
+            +b.A.btn--blue.--footer(href="#", data-form='call') Свяжитесь со мной
 
         .col-xs-12.col-lg-7.col-xl-8
           // Nav
@@ -56,5 +56,36 @@ include ../abstracts/bemto/bemto.pug
         .form-group
           +b.BUTTON.btn--red(type='submit') Отправить
           p.help-block.help-block-success Ваша заявка отправлена
-
+    // Form application
+    +b.SECTION.form--application
+      form(action='', method='')
+        .form-group.field-name.required
+          div Ваше имя*
+          +e.INPUT.input(type='text', name='Имя')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-tel.required
+          span Ваш телефон*
+          +e.INPUT.input(type='text', name='Телефон')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-email.required
+          span Ваш email*
+          +e.INPUT.input(type='text', name='Email')
+          p.help-block Ошибка заполнения поля формы
+        .form-group
+          +b.BUTTON.btn--red(type='submit') Отправить
+          p.help-block.help-block-success Ваша заявка отправлена
+    // Form call
+    +b.SECTION.form--call
+      form(action='', method='')
+        .form-group.field-name.required
+          div Ваше имя*
+          +e.INPUT.input(type='text', name='Имя')
+          p.help-block Ошибка заполнения поля формы
+        .form-group.field-tel.required
+          span Ваш телефон*
+          +e.INPUT.input(type='text', name='Телефон')
+          p.help-block Ошибка заполнения поля формы
+        .form-group
+          +b.BUTTON.btn--red(type='submit') Отправить
+          p.help-block.help-block-success Ваша заявка отправлена
 

@@ -49,12 +49,12 @@ jQuery(document).ready(function($){
   });
 
   /* Form success story the modal window */
-  $('.success-story .btn').click( function(e){
+  $('*[data-form]').click( function(e){
     e.preventDefault(); 
     var suffix = $(this).data('form'); 
     $('body').css({'overflow':'hidden'});   
     $('.overlay').show();
-    var formClass = '.form--upload';
+    var formClass = '.form--' + suffix;
     $('.overlay').find(formClass).fadeIn();
   });
   /* Close the modal window */
@@ -82,14 +82,21 @@ jQuery(document).ready(function($){
     return false;
   });
 
-  /* Form offers blue */
+  /* Form offers appearing */
   var offerYourIdea = $('.offer-item--your-idea')
   $(offerYourIdea).find('.btn').click( function(e){
     e.preventDefault();
-    $(offerYourIdea).addClass('offer-item--form-blue');
+    $(offerYourIdea).addClass('offer-item--your-idea-form');
     $(offerYourIdea).find('.offer-item__inner').hide();
     $(offerYourIdea).find('.form--offers').show();
     $(offerYourIdea).find('.btn').removeClass('btn--red').addClass('btn--blue');
+  });
+  var offerSelection = $('.offer-item--selection')
+  $(offerSelection).find('.btn').click( function(e){
+    e.preventDefault();
+    $(offerSelection).addClass('offer-item--selection-form');
+    $(offerSelection).find('.offer-item__inner').hide();
+    $(offerSelection).find('.form--offers').show();
   });
 
   /* Marks close */

@@ -1,0 +1,29 @@
+include ../abstracts/bemto/bemto.pug
+
++b.SECTION.form--offers
+  form(action='', method='')
+    +e.P.text Заполните поля для расчета Вашего бизнес-плана
+    .form-group.field-branch 
+      span Отрасль
+      +e.SELECT.select.branch-list
+        option Отрасль 1
+        option Отрасль 2
+        option Отрасль 3
+        option Отрасль 4
+        option Отрасль 5
+    .form-group.field-budget 
+      span Бюджет            
+      +e.INPUT.input(type='text', name='Бюджет', placeholder='до 100')
+      span тыс.руб
+      p.help-block Ошибка заполнения поля формы
+    .form-group.field-tel.required
+      span Телефон
+      +e.INPUT.input(type='text', name='Телефон')
+      p.help-block Ошибка заполнения поля формы
+    .form-group.field-email.required
+      span Email
+      +e.INPUT.input(type='text', name='Email')
+      p.help-block Ошибка заполнения поля формы
+    .form-group
+      +b.BUTTON.btn--red.--border-white(type='submit') Подобрать
+      p.help-block.help-block-success Ваша заявка отправлена

@@ -86,7 +86,7 @@
             </div>
             <div class="col-xs-12 col-sm-4 offset-sm-1 col-lg-2 offset-lg-0">
               <div class="header__btn">
-                <a class="btn btn--blue btn--header" href="#">Свяжитесь со мной</a>
+                <a class="btn btn--blue btn--header" href="#" data-form="call">Свяжитесь со мной</a>
               </div>
             </div>
           </div>
@@ -416,7 +416,7 @@
                   </div>
                   <div class="complex-offered-services__form">
                     <!-- Form application-->
-                    <section class="form form--application">
+                    <section class="form form--application-services">
                       <form action="" method="">
                         <div class="form-group field-name required">
                           <input class="form__input" type="text" name="Имя" placeholder="Ваше имя*" />
@@ -540,7 +540,7 @@
                   <div class="steps__icon"></div>
                   <div class="steps__index">Шаг 1 </div>
                   <div class="steps__text">Для начала работы с нами
-                    <a href="#">оставьте заявку </a>
+                    <a href="#" data-form="application">оставьте заявку </a>
                   </div>
                 </div>
                 <div class="steps__item">
@@ -831,6 +831,42 @@
                     <a class="btn btn--border-white btn--red" href="#">Показать все</a>
                   </div>
                 </div>
+                <!-- Form offers-->
+                <section class="form form--offers">
+                  <form action="" method="">
+                    <p class="form__text">Заполните поля для расчета Вашего бизнес-плана</p>
+                    <div class="form-group field-branch">
+                      <span>Отрасль</span>
+                      <select class="form__select branch-list">
+                        <option>Отрасль 1</option>
+                        <option>Отрасль 2</option>
+                        <option>Отрасль 3</option>
+                        <option>Отрасль 4</option>
+                        <option>Отрасль 5</option>
+                      </select>
+                    </div>
+                    <div class="form-group field-budget">
+                      <span>Бюджет </span>
+                      <input class="form__input" type="text" name="Бюджет" placeholder="до 100" />
+                      <span>тыс.руб</span>
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group field-tel required">
+                      <span>Телефон</span>
+                      <input class="form__input" type="text" name="Телефон" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group field-email required">
+                      <span>Email</span>
+                      <input class="form__input" type="text" name="Email" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--red btn--border-white" type="submit">Подобрать</button>
+                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                    </div>
+                  </form>
+                </section>
               </article>
               <article class="offer-item offer-item--your-idea">
                 <div class="offer-item__inner">
@@ -840,6 +876,42 @@
                     <a class="btn btn--border-white btn--blue" href="#">Узнать подробнее</a>
                   </div>
                 </div>
+                <!-- Form offers-->
+                <section class="form form--offers">
+                  <form action="" method="">
+                    <p class="form__text">Заполните поля для расчета Вашего бизнес-плана</p>
+                    <div class="form-group field-branch">
+                      <span>Отрасль</span>
+                      <select class="form__select branch-list">
+                        <option>Отрасль 1</option>
+                        <option>Отрасль 2</option>
+                        <option>Отрасль 3</option>
+                        <option>Отрасль 4</option>
+                        <option>Отрасль 5</option>
+                      </select>
+                    </div>
+                    <div class="form-group field-budget">
+                      <span>Бюджет </span>
+                      <input class="form__input" type="text" name="Бюджет" placeholder="до 100" />
+                      <span>тыс.руб</span>
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group field-tel required">
+                      <span>Телефон</span>
+                      <input class="form__input" type="text" name="Телефон" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group field-email required">
+                      <span>Email</span>
+                      <input class="form__input" type="text" name="Email" />
+                      <p class="help-block">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn--red btn--border-white" type="submit">Подобрать</button>
+                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                    </div>
+                  </form>
+                </section>
               </article>
             </div>
           </div>
@@ -862,7 +934,7 @@
             </div>
             <div class="col-xs-12 col-sm-5 offset-sm-2 col-md-3 offset-md-5 col-lg-2 offset-lg-0 flex-lg-last">
               <div class="footer__btn">
-                <a class="btn btn--blue btn--footer" href="#">Свяжитесь со мной</a>
+                <a class="btn btn--blue btn--footer" href="#" data-form="call">Свяжитесь со мной</a>
               </div>
             </div>
             <div class="col-xs-12 col-lg-7 col-xl-8">
@@ -913,6 +985,49 @@
             <div class="form-group field-upload">
               <div>Загрузите фото</div>
               <input class="form__input" type="file" accept="image/jpeg,image/png,image/gif" name="Фото" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group">
+              <button class="btn btn--red" type="submit">Отправить</button>
+              <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            </div>
+          </form>
+        </section>
+        <!-- Form application-->
+        <section class="form form--application">
+          <form action="" method="">
+            <div class="form-group field-name required">
+              <div>Ваше имя*</div>
+              <input class="form__input" type="text" name="Имя" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group field-tel required">
+              <span>Ваш телефон*</span>
+              <input class="form__input" type="text" name="Телефон" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group field-email required">
+              <span>Ваш email*</span>
+              <input class="form__input" type="text" name="Email" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group">
+              <button class="btn btn--red" type="submit">Отправить</button>
+              <p class="help-block help-block-success">Ваша заявка отправлена</p>
+            </div>
+          </form>
+        </section>
+        <!-- Form call-->
+        <section class="form form--call">
+          <form action="" method="">
+            <div class="form-group field-name required">
+              <div>Ваше имя*</div>
+              <input class="form__input" type="text" name="Имя" />
+              <p class="help-block">Ошибка заполнения поля формы</p>
+            </div>
+            <div class="form-group field-tel required">
+              <span>Ваш телефон*</span>
+              <input class="form__input" type="text" name="Телефон" />
               <p class="help-block">Ошибка заполнения поля формы</p>
             </div>
             <div class="form-group">

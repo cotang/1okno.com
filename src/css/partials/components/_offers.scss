@@ -78,7 +78,7 @@
       background-color: $blue;
     }
   }
-  &--form-blue{
+  &--your-idea-form{
     padding: 0;
     outline: none;
   }
@@ -94,8 +94,14 @@
     .offer-item__title{
       color: $text-color-white;
     }
+    .form--offers{
+      display: none;
+    }
   }
-
+  &--selection-form{
+    padding: 0;
+    outline: none;
+  }
   &__link{  
     color: $text-color;  
     &:hover, &:focus {
