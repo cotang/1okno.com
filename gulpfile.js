@@ -90,10 +90,7 @@ var path = {
 // Compilation pug
 gulp.task('pug', function() {
   return gulp.src(path.src.html)
-    .pipe(plumber(function(error) {
-      gutil.log(gutil.colors.red(error.message));
-      this.emit('end');
-    }))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(gulpif(devBuild, changed(path.build.html, {extension: '.html'})))
     .pipe(gulpif(global.isWatching, cached('pug')))
     // .pipe(pugInheritance({basedir: path.src.htmlDir}))
@@ -113,10 +110,7 @@ gulp.task('pug', function() {
 gulp.task('sass', function () {
   return gulp.src(path.src.css)
 //    .pipe(gulpif(devBuild, sourcemaps.init()))
-    .pipe(plumber(function(error) {
-        gutil.log(gutil.colors.red(error.message));
-        this.emit('end');
-    }))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(sass())
     .pipe(postcss([
       autoprefixer({browsers: ['last 3 version']}),
@@ -124,23 +118,45 @@ gulp.task('sass', function () {
     ]))
     .pipe(gulp.dest(path.build.css))    
     .pipe(cleancss())
-//    .pipe(gulpif(devBuild, sourcemaps.write()))
     .pipe(rename('style.min.css'))
+//    .pipe(gulpif(devBuild, sourcemaps.write()))
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream: true}));
 });
 
-// Compilation js
+
+// Compilation js v1
+// gulp.task('js', function() {
+//   var jsFiles = glob.sync(path.src.browserify);
+//   return browserify({
+//       entries: jsFiles,
+//       extensions: ['.jsx']
+//     })
+//     .bundle()  
+//     .pipe(plumber({ errorHandler: onError }))
+//     .pipe(source('script.js'))
+//     .pipe(gulp.dest(path.build.js))
+//     .pipe(buffer())
+//     .pipe(sourcemaps.init())
+//     .pipe(uglify())
+//     .pipe(rename('script.min.js')) 
+//     .pipe(sourcemaps.write('/'))   
+//     .pipe(gulp.dest(path.build.js))
+//     .pipe(reload({stream: true}));
+// });
+
+// Compilation js v2 
+// (If jquery is used from 3rd party, and you need to exclude it from script.min.js, you should manually put all required .js files into path.src.js directory)
 gulp.task('js', function() {
   return gulp.src(path.src.js)
-//    .pipe(gulpif(devBuild, sourcemaps.init()))
+//    .pipe(gulpif(devBuild, sourcemaps.init({loadMaps: true})))
+    .pipe(plumber({ errorHandler: onError }))
     .pipe(concat('script.min.js'))
     .pipe(uglify())
-//    .pipe(gulpif(devBuild, sourcemaps.write()))
+//    .pipe(gulpif(devBuild, sourcemaps.write('/')))
     .pipe(gulp.dest(path.build.js))
     .pipe(reload({stream: true}));
 });
-
 
 // Optimization images
 gulp.task('img', function () {
@@ -219,9 +235,9 @@ var config = {
   server: {
     baseDir: "./build"
   },
-//  tunnel: true,
+  // tunnel: true,
   host: 'localhost',
-  port: 8000
+  port: 9000
 };
 // Browser sync
 gulp.task('browserSync', ['build'], function() {
@@ -236,7 +252,7 @@ gulp.task('setWatch', function() {
 gulp.task('watch', ['setWatch', 'browserSync'], function(){
   gulp.watch([path.watch.html], function(event, cb) {
     gulp.start('pug');
-  });
+  }, [reload]);
   gulp.watch([path.watch.css], function(event, cb) {
     gulp.start('sass');
   });
@@ -267,3 +283,9 @@ gulp.task('deploy', function() {
 gulp.task('default', ['watch']);
 
 
+var onError = function(err) {
+    notify.onError({
+      title: "Error in " + err.plugin,
+    })(err);
+    this.emit('end');
+}

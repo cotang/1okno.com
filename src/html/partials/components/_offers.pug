@@ -5,27 +5,27 @@ include ../abstracts/mixins/_offer-item.pug
   .container
     +e.inner     
       //- 1
-      +offerItem
+      +offerItem('Гостиница для животных', 'business1', 'single-business-1.html', '705 500', '18', '40 000 – 280 000')
       //- 2
-      +offerItem
+      +offerItem('Музей шоколада', 'business2', 'single-business-2.html', '2 828 000', '19', '113 088 – 373 207')
       //- 3
-      +offerItem
+      +offerItem('Выращивание сои', 'business3', 'single-business-3.html',  '1 000 000', '10', '10 000')
       //- 4
-      +offerItem
+      +offerItem('Магазин проката карнавальных костюмов', 'business4', 'single-business-4.html', '876 000', '17', '135 493')
       //- 5
-      +offerItem
+      +offerItem('Курсы китайского языка', 'business5', 'single-business-5.html', '41000', '1', '199 589')
       //- 6
       +b.ARTICLE.offer-item--form
         // Form offers
         include _form--offers.pug
       //- 7
-      +offerItem              
+      +offerItem('Скалодром', 'business6', 'single-business-6.html', '155 000', '25', '1 658 000')           
       //- 8
-      +offerItem
+      +offerItem('Служба доставки', 'business7', 'single-business-7.html', '1 000 000', '17', '10 000')
       //- 9
-      +offerItem
+      +offerItem('Ателье графического тюнинга', 'business8', 'single-business-8.html', '1 000 000', '12', '10 000')
       //- 10
-      +offerItem
+      +offerItem('Производство садовых фигур из гипса', 'business9', 'single-business-9.html', '228500', '5', '10 000')
       //- 11
       +b.ARTICLE.offer-item--not-found
         +e.DIV.inner        

@@ -1,20 +1,21 @@
-mixin offerItem
+mixin offerItem(title, img, link, start, payback, profit)
 
   +b.ARTICLE.offer-item
-    +e.A.link(href="single-business.html")
+    //- +e.A.link(href='single-business.html')
+    +e.A.link(href=link)
       +e.DIV.img
-        img(src='img/offer1.jpg', alt='offer1', title='offer1')
+        img(src='img/offers/'+img+'.jpg', alt=title, title=title)
       +e.DIV.text          
-        +e.H3.title Фитоняшка
-        +e.description бизнес-план для собственного фитнесс-клуба
+        +e.H3.title #{title}
+        +e.description бизнес-план для собственного дела
       +e.DIV.details
         +b.offer-detail
-          +e.figures 4 000 000 Р
+          +e.figures #{start}
           +e.text Стартовый капитал 
         +b.offer-detail
-          +e.figures 6 мес
+          +e.figures #{payback}
           +e.text Окупаемость 
         +b.offer-detail
-          +e.figures 90 000 Р
+          +e.figures #{profit}
           +e.text Прибыль в месяц       
 

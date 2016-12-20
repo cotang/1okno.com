@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
     itemSelector: '.review-item'
   });
 
-  /* Form success story the modal window */
+  /* Form in modal window */
   $('*[data-form]').click( function(e){
     e.preventDefault(); 
     var suffix = $(this).data('form'); 
@@ -57,7 +57,7 @@ jQuery(document).ready(function($){
     var formClass = '.form--' + suffix;
     $('.overlay').find(formClass).fadeIn();
   });
-  /* Close the modal window */
+  /* Close modal window */
   $('.overlay__bg, .overlay__close').click( function(e){ 
     e.preventDefault();
     $('body').css({'overflow':'auto'});
