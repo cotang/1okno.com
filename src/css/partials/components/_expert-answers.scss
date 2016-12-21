@@ -31,26 +31,20 @@
 }
 
 .expert-type{
-  &:nth-of-type(1){
-    border-right: 1px dashed $grey-border;
-    .expert-type__icon{
-      @include sprite($s-staff1);
-      flex: 0 0 24px;
-    }
-  }
-  &:nth-of-type(2){
-    border-right: 1px dashed $grey-border;
+
+  &--lawyers{
     .expert-type__icon{
       @include sprite($s-staff2);
       flex: 0 0 32px;
     }
   }
-  &:nth-of-type(3){
+  &--bookkeepers{
     .expert-type__icon{
       @include sprite($s-staff3);
       flex: 0 0 27px;
     }
   }
+
   &__inner{
     padding: 0 10px;
   }
@@ -61,8 +55,21 @@
     color: $text-black;
     margin: 20px 0;
   }
+  &__subtitle{
+    @include font-family('Proxima Nova Light', normal, normal);
+    color: $text-black;
+    margin: 20px 0;
+    padding-left: 40px;
+    font-size: $font-size-subtitle;
+  }
   &__icon{
+    @include sprite($s-staff1);
+    flex: 0 0 24px;
     margin-right: 10px;
+  }
+  &__branch{
+    color: $text-black;
+    text-decoration: none;
   }
   &__btn{
     margin-top: 40px;
@@ -71,11 +78,10 @@
 
 .question-item{
   background-color: $pale;
-  // border: 1px solid black;
   padding: 20px;
   text-align: left;
   position: relative;
-  margin-top: 30px;
+  margin-bottom: 30px;
 
   &__ask{
     color: $text-black;

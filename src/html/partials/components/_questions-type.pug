@@ -22,49 +22,55 @@ include ../abstracts/mixins/_member-item.pug
         =' / '
         +e.SPAN.filter-chosen последние
 
-    +b.expert-type--certificators
-      +e.H1.title
-        +e.icon
-        +e.branch Специалисты по сертификации
+    .row
+      .col-xs-12.col-lg-8
+        +b.expert-type--certificators
+          +e.H1.title
+            +e.icon
+            +e.branch Специалисты по сертификации
+          +e.H2.subtitle Консультации по сертификации
+          +e.articles.row
+            .col-xs-12.col-lg-6
+              +questionItem
+            .col-xs-12.col-lg-6
+              +questionItem
+            .col-xs-12.col-lg-6
+              +questionItem
+            .col-xs-12.col-lg-6
+              +questionItem
+            .col-xs-12.col-lg-6
+              +questionItem
+            .col-xs-12.col-lg-6
+              +questionItem
 
-      .row
-        .col-xs-12.col-lg-4
-          +e.articles
-            +questionItem
-            +questionItem
-            +questionItem
+        +b.pagination
+          +e.A.number--current(href="page-type-questions.html") 1
+          +e.A.number(href="page-type-questions.html") 2
+          +e.A.number(href="page-type-questions.html") 3
+          +e.SPAN.dots ...
+          +e.A.number(href="page-type-questions.html") 10
 
-        .col-xs-12.col-lg-4
-          +e.articles
-            +questionItem
-            +questionItem
-            +questionItem
-
-        .col-xs-12.col-lg-4
-          +b.members
+      .col-xs-12.col-lg-4          
+        +b.members
+          +e.H3.title Рейтинг специалистов и компаний
+          +e.list
             +memberItem
             +memberItem
             +memberItem
             +memberItem
             +memberItem
             +memberItem          
-          +e.subscribe
-            // Form subscribe mini
-            +b.SECTION.form--subscribe-mini
-              form(action='', method='')
-                +e.H3.title Подписаться на новые вопросы по сертификации
-                .form-group.field-email.required
-                  div Ваш email*
-                  +e.INPUT.input(type='email', name='Email')
-                  p.help-block Ошибка заполнения поля формы
-                .form-group
-                  +b.BUTTON.btn--blue.--border-white(type='submit') Отправить
-                  p.help-block.help-block-success Ваша заявка отправлена
+        +e.subscribe
+          // Form subscribe mini
+          +b.SECTION.form--subscribe-mini
+            form(action='', method='')
+              +e.H3.title Подписаться на новые вопросы по сертификации
+              .form-group.field-email.required
+                div Ваш email*
+                +e.INPUT.input(type='email', name='Email')
+                p.help-block Ошибка заполнения поля формы
+              .form-group
+                +b.BUTTON.btn--blue.--border-white(type='submit') Отправить
+                p.help-block.help-block-success Ваша заявка отправлена
 
-    +b.pagination
-      +e.A.number--current(href="page-type-questions.html") 1
-      +e.A.number(href="page-type-questions.html") 2
-      +e.A.number(href="page-type-questions.html") 3
-      +e.SPAN.dots ...
-      +e.A.number(href="page-type-questions.html") 10
 

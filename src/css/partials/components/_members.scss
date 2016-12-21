@@ -1,5 +1,10 @@
 .members{
-  
+  &__title{
+    @include font-family('Proxima Nova Light', normal, normal);
+    color: $text-black;
+    margin: 30px 0;
+    font-size: $font-size-subtitle;
+  }
 }
 .member-item{
   display: flex;

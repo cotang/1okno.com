@@ -6,13 +6,18 @@ include ../abstracts/bemto/bemto.pug
     +e.inner
       +e.UL.list
         +e.item
-          +e.link(href="page-type-questions.html") Регистрация бизнеса
+          +e.link--active(href="page-type-questions.html") Сертификация и декларирование
         +e.item
-          +e.link--active(href="page-type-questions.html") Сертификация
+          +e.link(href="page-type-questions.html") Охрана труда (СОУТ)
+        +e.item
+          +e.link(href="page-type-questions.html") Техническая документация
+        +e.item
+          +e.link(href="page-type-questions.html") Регистрация бизнеса
         +e.item
           +e.link(href="page-type-questions.html") Бухгалтерские услуги
       // Search
       +b.search
+        +e.A.icon(href="#")
         // Form search
         +b.SECTION.form--search
           form(action='', method='')
@@ -22,3 +27,12 @@ include ../abstracts/bemto/bemto.pug
             .form-group
               +b.BUTTON.btn--red(type='submit') Найти
               p.help-block.help-block-success Ваша заявка отправлена
+
+
+
+
+
+
+
+
+

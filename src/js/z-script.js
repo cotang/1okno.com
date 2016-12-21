@@ -105,6 +105,23 @@ jQuery(document).ready(function($){
     $(this).closest('.marks__item').remove();
   });
 
+  /* Search */
+  $('.search__icon').click(function(e) { 
+      e.preventDefault();
+      $(this).closest('.search').find('.form').toggle();
+  });
+
+  /* service textblock slideToggle */
+  $('.service__link').click(function(e){
+      e.preventDefault();
+      $(this).closest('.service__item').toggleClass('service__item--active');
+      $(this).closest('.service__item').find('.service__text').slideToggle();
+  }); 
+
+
+
+
+
   // /* плавный скролл наверх */
   // $('.up').click(function () {
   //   $("html, body").animate({

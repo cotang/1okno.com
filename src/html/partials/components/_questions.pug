@@ -21,43 +21,70 @@ include ../abstracts/mixins/_question-item.pug
         =' / '
         +e.SPAN.filter-chosen последние
 
-    .row
-      +b.expert-type--certificators.col-xs-12.col-lg-4
-        +e.inner
-          +e.H3.title
-            +e.icon
-            +e.branch Специалисты по сертификации
-          +e.articles
+    +e.expert-types
+      +b.expert-type--certificators
+        +e.H3.title
+          +e.icon
+          +e.branch(href="page-type-questions.html") Сертификация и декларирование
+        .row
+          .col-xs-12.col-lg-4
             +questionItem
+          .col-xs-12.col-lg-4
             +questionItem
-            +questionItem
-
-      +b.expert-type--lawyers.col-xs-12.col-lg-4
-        +e.inner
-          +e.H3.title
-            +e.icon
-            +e.branch Юристы центра
-          +e.articles
-            +questionItem
-            +questionItem
+          .col-xs-12.col-lg-4
             +questionItem
 
-      +b.expert-type--bookkeepers.col-xs-12.col-lg-4
-        +e.inner      
-          +e.H3.title
-            +e.icon
-            +e.branch Бухгалтерская поддержка
-          +e.articles
+      +b.expert-type
+        +e.H3.title
+          +e.icon
+          +e.branch(href="page-type-questions.html") Охрана труда (СОУТ)
+        .row
+          .col-xs-12.col-lg-4
             +questionItem
+          .col-xs-12.col-lg-4
             +questionItem
-            //- +b.all-questions
-            //-   +b.A.btn--border-red.--color-red(href="#") Все вопросы
-            //-   +b.A.btn--border-blue.--color-blue(href="#") Задать вопрос
-            +questionItem 
+          .col-xs-12.col-lg-4
+            +questionItem
 
-    +b.pagination
-      +e.A.number--current(href="page-questions.html") 1
-      +e.A.number(href="page-questions.html") 2
-      +e.A.number(href="page-questions.html") 3
-      +e.SPAN.dots ...
-      +e.A.number(href="page-questions.html") 10
+      +b.expert-type
+        +e.H3.title
+          +e.icon
+          +e.branch(href="page-type-questions.html") Техническая документация
+        .row
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+
+      +b.expert-type--lawyers
+        +e.H3.title
+          +e.icon
+          +e.branch(href="page-type-questions.html") Регистрация бизнеса
+        .row
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+
+      +b.expert-type--bookkeepers
+        +e.H3.title
+          +e.icon
+          +e.branch(href="page-type-questions.html") Бухгалтерская поддержка
+        .row
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+          .col-xs-12.col-lg-4
+            +questionItem
+
+    //- +b.pagination
+    //-   +e.A.number--current(href="page-questions.html") 1
+    //-   +e.A.number(href="page-questions.html") 2
+    //-   +e.A.number(href="page-questions.html") 3
+    //-   +e.SPAN.dots ...
+    //-   +e.A.number(href="page-questions.html") 10
