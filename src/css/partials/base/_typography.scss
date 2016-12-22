@@ -9,8 +9,7 @@
 //     font-style: normal;
 // }
 
-@include font-face('Proxima Nova Regular', 'Proxima Nova', 'Proxima Nova Regular', proxima_nova_regular-webfont);
-@include font-face('Proxima Nova Light', 'Proxima Nova', 'Proxima Nova Light', proxima_nova_light-webfont);
-@include font-face('Proxima Nova Extrabold', 'Proxima Nova', 'Proxima Nova Extrabold', proxima_nova_extrabold-webfont);
-
-@include font-face('Proxima Nova Semibold', 'Proxima Nova', 'Proxima Nova Semibold', proxima_nova_semibold-webfont);
+@include font-face('Proxima Nova Regular', 'Proxima Nova', 'Proxima Nova Regular', proximanova-reg-webfont);
+@include font-face('Proxima Nova Light', 'Proxima Nova', 'Proxima Nova Light', proximanova-light_0-webfont);
+@include font-face('Proxima Nova Extrabold', 'Proxima Nova', 'Proxima Nova Extrabold', proximanova-xbold-webfont);
+@include font-face('Proxima Nova Bold', 'Proxima Nova', 'Proxima Nova Bold', proximanova-bold-webfont);

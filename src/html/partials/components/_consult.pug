@@ -1,4 +1,5 @@
 include ../abstracts/bemto/bemto.pug
+include ../abstracts/mixins/_expert-item.pug
 
 +b.SECTION.consult
   +e.H2.title Консультация экспертов
@@ -11,12 +12,10 @@ include ../abstracts/bemto/bemto.pug
         +e.text готовы ответить на ваши вопросы 24/7 
     .col-xs-12.col-lg-8
       +e.gallery
-        - for (var i = 0; i < 5; i++){
-          +e.person(itemscope, itemtype="http://schema.org/Person")
-            +e.img
-              img(src="img/manager1.png", alt="manager", title="manager", itemprop="image")
-            +e.H3.name(itemprop="name") Ирина Владимирова
-        - }
+        +expertItem('Алена Сагидуллина', 'Alena_Sagidullina')
+        +expertItem('Анастасия Шушаричева', 'Anastasia_Shusharicheva')
+        +expertItem('Елена Капралова', 'Elena_Kapralova')
+        +expertItem('Мария Бутакова', 'Maria_Butakova')
   +b.staff--lawyers.row
     .col-xs-12.col-lg-4
       +e.description
@@ -25,12 +24,10 @@ include ../abstracts/bemto/bemto.pug
         +e.text проконсультируют по вопросам регистрации бизнеса 
     .col-xs-12.col-lg-8
       +e.gallery
-        - for (var i = 0; i < 6; i++){
-          +e.person(itemscope, itemtype="http://schema.org/Person")
-            +e.img
-              img(src="img/manager1.png", alt="manager", title="manager", itemprop="image")
-            +e.H3.name(itemprop="name") Ирина Владимирова
-        - }
+        +expertItem('Татьяна Шурыгина', 'Tatiana_Shurygina')
+        +expertItem('Ксения Гоголева', 'Ksenia_Gogoleva')
+        +expertItem('Елена Середа', 'Elena_Sereda')
+        +expertItem('Оксана Лоскутова', 'Oksana_Loskutova')
   +b.staff--bookkeepers.row
     .col-xs-12.col-lg-4
       +e.description
@@ -39,10 +36,6 @@ include ../abstracts/bemto/bemto.pug
         +e.text по расчетам и налогообложению
     .col-xs-12.col-lg-8
       +e.gallery
-        - for (var i = 0; i < 4; i++){
-          +e.person(itemscope, itemtype="http://schema.org/Person")
-            +e.img
-              img(src="img/manager1.png", alt="manager", title="manager", itemprop="image")
-            +e.H3.name(itemprop="name") Ирина Владимирова
-        - }
-
+        +expertItem('Айгуль Янтурина', 'Aigul_Yanturina')
+        +expertItem('Мария Бутакова', 'Maria_Butakova')
+        +expertItem('Оксана Лоскутова', 'Oksana_Loskutova')

@@ -18,6 +18,12 @@
     display: flex;
     flex-wrap: wrap;
   }
+  &__img{
+    margin: 0 30px 10px;
+    img{
+      border-radius: 50%;
+    }
+  }
   &__person{
     flex: 0 0 33.33%;
     max-width: 33.33%;

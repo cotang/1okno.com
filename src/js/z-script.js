@@ -14,13 +14,6 @@ jQuery(document).ready(function($){
     centerMode: true,
     centerPadding: '0',
     responsive: [
-      // {
-      //   breakpoint: 1024,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 1
-      //   }
-      // },
       {
         breakpoint: 768,
         settings: {
@@ -117,6 +110,77 @@ jQuery(document).ready(function($){
       $(this).closest('.service__item').toggleClass('service__item--active');
       $(this).closest('.service__item').find('.service__text').slideToggle();
   }); 
+
+
+  /* Sticky and absolute .service-stages block */
+  var serviceStages = $('.service-stages');
+  var serviceStagesTop = serviceStages.offset().top;
+  var serviceStagesLeft = serviceStages.offset().left;
+  var serviceStagesWidth = serviceStages.width();
+  var serviceStagesOuterHeight = serviceStages.outerHeight(true);
+
+  var serviceStagesBottom;
+  var serviceStagesAbsolute;
+  // console.log(serviceStagesTop) //376
+  // console.log($('.services').outerHeight(true)) //2266
+  // console.log($('.services').offset().top) //90  
+  // console.log(serviceStagesBottom) //2356
+  // console.log(serviceStagesAbsolute) //1930
+
+  $(window).scroll(function () {
+    if ($(window).width() > 1024) {
+      /* изменение этапа по третям высоты блока контента */
+      if ($(this).scrollTop() >= (serviceStagesTop + $('.services__sidebar').outerHeight(true)*2/3 )) {
+        $('.service-stage-item').hide();
+        $('.service-stage-item--3').show();
+      } else if ($(this).scrollTop() >= (serviceStagesTop + $('.services__sidebar').outerHeight(true)/3 )) {
+        $('.service-stage-item').hide();
+        $('.service-stage-item--2').show();
+      } else {
+        $('.service-stage-item').hide();
+        $('.service-stage-item--1').show();
+      }
+      /* корректная перебивка значения высоты меняюшегося блока */
+      serviceStages = $('.service-stages');
+      serviceStagesOuterHeight = serviceStages.outerHeight(true);
+      serviceStagesBottom = $('.services').offset().top + $('.services').outerHeight(true);
+      serviceStagesAbsolute = serviceStagesBottom - serviceStagesOuterHeight;
+
+      /* service-stages - relative/fixed/absolute */
+      if ($(this).scrollTop() >= serviceStagesAbsolute ) {
+        $(serviceStages).removeClass('service-stages--sticky');
+        $(serviceStages).addClass('service-stages--absolute');
+        $(serviceStages).css({"width":serviceStagesWidth, "left":"10px"});
+      } else if ($(this).scrollTop() >= serviceStagesTop ) {
+        $(serviceStages).removeClass('service-stages--relative service-stages--absolute');
+        $(serviceStages).addClass('service-stages--sticky');
+        $(serviceStages).css({"width":serviceStagesWidth, "left":serviceStagesLeft});
+      } else {
+        $(serviceStages).removeClass('service-stages--sticky');
+        $(serviceStages).addClass('service-stages--relative');
+        $(serviceStages).css({"width":'auto', "left":"0"});
+      }
+    }
+  });
+
+  /* hamburger */
+  // $('.hamburger').click(function(e) { 
+  //     e.preventDefault();    
+  //     $(this).closest('.header').find('.header__nav').slideToggle();
+  //     $(this).closest('.header').find('.header__services').slideToggle();
+  // });
+  // $(window).resize(function(){
+  //   if ($(window).width() > 768) {
+  //     $('.header__nav').show();
+  //     $('.header__services').show();
+  //   } else {
+  //     $('.header__nav').hide();
+  //     $('.header__services').hide();
+  //   }
+  // });
+
+
+
 
 
 
