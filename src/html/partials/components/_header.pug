@@ -9,9 +9,9 @@ include ../abstracts/bemto/bemto.pug
           +e.logo
             // Logo
             +b.A.logo--header(href="index.html", itemscope, itemtype="http://schema.org/Brand") 
-              //- img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
-              span.blue Единый портал
-              span.red бизнес услуг
+              img(src="img/logo.png", alt="logo", title="logo", itemprop="logo")
+              //- span.blue Единый портал
+              //- span.red бизнес услуг
 
         .col-xs-12.col-sm-2.hidden-lg
           +e.hamburger
@@ -30,8 +30,8 @@ include ../abstracts/bemto/bemto.pug
                 +e.A.link(href="page-questions.html") Эксперты и консультация
               +e.item 
                 +e.A.link(href="page-reviews.html") Отзывы
-              +e.item
-                +e.A.link(href="page-contacts.html") Контакты
+              //- +e.item
+              //-   +e.A.link(href="page-contacts.html") Контакты
 
         .col-xs-12.col-sm-4.offset-sm-1.col-lg-2.offset-lg-0
           +e.btn
